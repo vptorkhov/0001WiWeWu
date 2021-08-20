@@ -1,0 +1,14 @@
+
+//- scial buttons
+mixin soc()
+	+b.soc
+		mixin item(icon, a='#')
+			+e.A.item(href= a target="_blank")
+				if block
+					block
+				else
+					+icon(icon)
+		+item('fb')
+		+item('instafram')
+		+item('vk')
+//- /scial buttons 
