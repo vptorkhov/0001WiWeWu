@@ -1,44 +1,62 @@
 // start .sAdvantages
 .sAdvantages {
-	--sPT:#{rem(102)};
-	--sPB:#{rem(87)};
-	@include media-breakpoint-down(sm){
-		--sPT:#{rem(102)/2};
-		--sPB:#{rem(87)/2};
+	--sPT: #{rem(102)};
+	--sPB: #{rem(87)};
+	@include media-breakpoint-down(sm) {
+		--sPT: #{rem(102) * 0.5};
+		--sPB: #{rem(87) * 0.5};
 	}
-	.section-title{
-		padding-bottom: rem(60);
+	.section-title {
+		padding-bottom: rem(55);
 	}
-	.row{
-		@include media-breakpoint-down(lg){
-			--bs-gutter-y:#{rem(20)};
-		}
-	}
-	.col-advantages {
-		@include media-breakpoint-up(xxl){
-			padding-right: rem(30);
+	.row {
+		@include media-breakpoint-down(lg) {
+			--bs-gutter-y: #{rem(30)};
+			--bs-gutter-x: #{rem(30)};
 		}
 	}
 	&__icon {
+		padding: 0;
 		width: rem(32);
 		height: rem(32);
 	}
 	.h5 {
-		padding-top: rem(38);
+		@include media-breakpoint-up(lg){
+			padding-top: rem(38);
+		}
+		padding-top: rem(10);
 		margin-bottom: 0;
 	}
 	&__caption {
-		padding-top: rem(26);
+		padding-top: rem(12);
 		color: $secondary;
+		line-height: 24px;
+		// @include media-breakpoint-down(lg){
+		// 	max-width: rem(310);
+		// }
 	}
-	&__btn{
-		@extend .btn, .btn-info;
-		margin-top: rem(70);
+	&__btn-wrap {
+		display: flex;
+		justify-content: center;
+		position: relative;
+	}
+	&__btn {
+		@extend .btn;
+		@include mt;
+		margin-top: rem(66);
+		color:white !important;
 		font-weight: 500;
 		line-height: 21px;
 		padding-top: rem(19);
 		padding-bottom: rem(19);
 		width: rem(270);
+		background: linear-gradient(to top, #c39854 0%, #d4b688 100%);
+		opacity: 1;
+		&:hover{
+			@include media-breakpoint-up(lg){
+				opacity: 0.8;
+			}
+		}
 	}
 	@include media-breakpoint-up(xl) {
 	}

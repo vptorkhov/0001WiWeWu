@@ -1,5 +1,5 @@
 .pixel-perfect {
-	top: 0;
+	top: -600px;
 	display: block;
 	@include a-cent(x);
 	pointer-events: none;
@@ -9,12 +9,12 @@
 	height: 100%;
 	background-position: center 0;
 	opacity: 0;
-	// opacity: 0.7;
+	//opacity: 0.7;
 } 
 
 body,
 html {
-	font-size: var(--bs-body-font-size);
+	font-size: var(--fontSizeBase);
 }
 html{
 	-webkit-text-size-adjust: 100%;
@@ -486,11 +486,13 @@ iframe {
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='15' viewBox='0 0 24 24'><path fill='#{$primary}' d='M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z'/></svg>"); 
 }
 
-.btn-info{
-	@include mt;
-	border-width: 0;
-	color: white;
-	&:focus{
-		box-shadow: 0 0 0 0.2rem #d7ba8d !important;
+h2 ,h5{
+	font-family: Montserrat;
+}
+
+.container{
+	@include media-breakpoint-up(xxl){
+		max-width: 1200px;
 	}
 }
+// NOT DEFAULT!!
