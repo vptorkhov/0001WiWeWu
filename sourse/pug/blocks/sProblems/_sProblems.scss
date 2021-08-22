@@ -1,29 +1,159 @@
+// start .sProblems
+.sProblems {
+	background-color: $light;
+	--sPT: #{rem(49)};
+	--sPB: #{rem(108)};
+	.col-picture {
+		padding: 0;
+	}
+	.h2 {
+		line-height: rem(60);
+		text-align: center;
+		@include media-breakpoint-up(xl) {
+			padding-top: rem(35);
+			text-align: left;
+		}
+	}
+	&__caption {
+		text-align: center;
+		padding-top: rem(18.5);
+		font-size: $large;
+		font-weight: 300;
+		line-height: 28px;
+		@include media-breakpoint-up(xl) {
+			text-align: left;
+		}
+	}
+	ul {
+		padding-top: rem(15);
+		li {
+			line-height: rem(30);
+			position: relative;
+			list-style-type: none;
+			padding-left: rem(20);
+			@include media-breakpoint-up(xl) {
+				padding-left: rem(35);
+			}
+			@include media-breakpoint-between(md, xl) {
+				font-size: rem(16);
+			}
+			&::before {
+				content: "";
+				position: absolute;
+				background-image: url("../img/svg/problems-marker.svg");
+				width: rem(10);
+				height: rem(10);
+				background-size: contain;
+				top: rem(10);
+				left: 0;
+				@include media-breakpoint-up(md) {
+					width: rem(13);
+					height: rem(13);
+				}
+				@include media-breakpoint-up(xl) {
+					top: rem(9);
+					left: rem(5);
+				}
+			}
+		}
+	}
+	.col-desc {
+		@include media-breakpoint-up(xl) {
+			padding-left: rem(14);
+			padding-right: rem(14);
+		}
+	}
+	&__description {
+		padding-top: rem(16);
+		padding-left: rem(36);
+		padding-right: rem(36);
+		padding-bottom: rem(16);
+		font-size: $large;
+		line-height: rem(28);
+		font-weight: 300;
+		color: white;
+		min-height: rem(96);
+		background-color: $success;
+		border-radius: $border-radius;
+		@include media-breakpoint-up(xl) {
+			padding-bottom: 0;
+			margin-top: rem(-27);
+			padding-right: rem(132);
+		}
+	}
+	.row-items{
+		margin-top: 20px;
+	}
+	&__item{
+		box-shadow: 0 7px $small 3px rgba(202, 207, 221, 0.08);
+		background-color: #fff;
+		border-radius: $border-radius;
+		padding-left: rem(36);
+		padding-top: rem(30);
+		padding-bottom: rem(34);
+		padding-right: rem(36);
+		@include media-breakpoint-between(md,lg){
+			min-height: 142px;
+		}
+		@include media-breakpoint-down(md){
+			display: flex;
+			align-items: center;
+		}
+	}
+	&__icon{
+		width: rem(26);
+		height: rem(24);
+		object-fit: contain;
+	}
+	&__item-caption{
+		line-height: 24px;
+		padding-top: rem(22);
+		@include media-breakpoint-down(md){
+			padding-top: 0;
+			padding-left: rem(20);
+		}
+	}
+	.row-items{
+		@include media-breakpoint-down(lg){
+			--bs-gutter-y: #{rem(20)};
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-up(xs) {
+	}
 
-	// start .sProblems
-	.sProblems {
-		 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-up(xs) {}
-	
 	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
-	//
-	@include media-breakpoint-only(xs) {}
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
-	@include media-breakpoint-only(xl) {}
-	
-	//
-	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+	@include media-breakpoint-between(md, xl) {
+	}
 
+	//
+	@include media-breakpoint-only(xs) {
+	}
+	@include media-breakpoint-only(sm) {
+	}
+	@include media-breakpoint-only(md) {
+	}
+	@include media-breakpoint-only(lg) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+
+	//
+	@include media-breakpoint-down(xl) {
+	}
+	@include media-breakpoint-down(lg) {
+	}
+	@include media-breakpoint-down(md) {
+	}
+	@include media-breakpoint-down(sm) {
+	}
+	@include media-breakpoint-down(xs) {
+	}
 } // end.sProblems
