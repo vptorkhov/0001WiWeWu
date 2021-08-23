@@ -359,7 +359,7 @@ function eventHandler() {
 	const swiper4 = new Swiper('.sReviews__slider--js', {
 		// slidesPerView: 5,
 		// ...defaultSl,
-		slidesPerView: 3,
+		slidesPerView: 1,
 		spaceBetween: 30,
 
 		// freeMode: true,
@@ -373,6 +373,25 @@ function eventHandler() {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 20
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 25
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 30
+			}
+		}
 
 	});
 	// modal window
