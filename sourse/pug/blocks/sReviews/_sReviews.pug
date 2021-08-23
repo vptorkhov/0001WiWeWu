@@ -4,6 +4,33 @@ mixin sReviews()
 		.container
 			+b.section-title.text-center
 				h2 sReviews
-				
-			.row
+			+e.slider-wrap
+				+e.slider--js.swiper-container 
+					.swiper-wrapper
+						mixin slide(t, p)
+							+e.slide.swiper-slide
+								+b.rew-item
+									+e.block
+										+e.head
+											.row.align-items-center
+												.col
+													img(src="img/svg/rew-logo.svg" loading="lazy", alt="")
+												.col-auto
+													+b.star-block 
+														+icon("star", "active")
+														+icon("star", "active")
+														+icon("star", "active")
+														+icon("star", "active")
+														+icon("star")
+										+e.body 
+											h5!= t
+											p!= p
+											+e.date 22 февраля 2021
+						+slide(`Владимир Ковалев`, `Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение ...`)
+						+slide(`Ольга иванова`, `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime recusandae, odit consequuntur laboriosam eos quia suscipit laudantium nostrum illum esse dolores velit quo adipisci nobis. Tenetur dicta natus a alias!`)
+						+slide(`Сергей Петров`, `Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение ...`)
+						+slide(`Владимир Ковалев`, `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime recusandae, odit consequuntur laboriosam eos quia suscipit laudantium nostrum illum esse dolores velit.`)
+				.swiper-pagination
+				+e.arrows
+					+arrow
 	// end sReviews

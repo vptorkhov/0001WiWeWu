@@ -1,11 +1,5 @@
 "use strict";
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 let div = document.createElement('div');
 div.style.overflowY = 'scroll';
 div.style.width = '50px';
@@ -346,7 +340,6 @@ function eventHandler() {
 			loadPrevNext: true
 		},
 		watchOverflow: true,
-		spaceBetween: 0,
 		loop: true,
 		navigation: {
 			nextEl: '.swiper-button-next',
@@ -360,15 +353,34 @@ function eventHandler() {
 			// }
 
 		}
-	};
-	const swiper4 = new Swiper('.sBanners__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
-		slidesPerView: 'auto',
-		freeMode: true,
+	}; // const swiper4 = new Swiper('.sBanners__slider--js', {
+	// 	// slidesPerView: 5,
+	// 	...defaultSl,
+	// 	slidesPerView: 'auto',
+	// 	freeMode: true,
+	// 	loopFillGroupWithBlank: true,
+	// 	touchRatio: 0.2,
+	// 	slideToClickedSlide: true,
+	// 	freeModeMomentum: true,
+	// });
+
+	const swiper4 = new Swiper('.sReviews__slider--js', {
+		// slidesPerView: 5,
+		// ...defaultSl,
+		slidesPerView: 3,
+		spaceBetween: 30,
+		// freeMode: true,
 		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
+		// touchRatio: 0.2,
 		slideToClickedSlide: true,
-		freeModeMomentum: true
-	})); // modal window
+		// freeModeMomentum: true,
+		loop: true,
+		watchOverflow: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev'
+		}
+	}); // modal window
 }
 
 ;
