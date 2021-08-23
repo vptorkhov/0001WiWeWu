@@ -81,10 +81,10 @@
 			padding-right: rem(132);
 		}
 	}
-	.row-items{
+	.row-items {
 		margin-top: 20px;
 	}
-	&__item{
+	&__item {
 		box-shadow: 0 7px $small 3px rgba(202, 207, 221, 0.08);
 		background-color: #fff;
 		border-radius: $border-radius;
@@ -92,29 +92,29 @@
 		padding-top: rem(30);
 		padding-bottom: rem(34);
 		padding-right: rem(36);
-		@include media-breakpoint-between(md,lg){
+		@include media-breakpoint-between(md, lg) {
 			min-height: 142px;
 		}
-		@include media-breakpoint-down(md){
+		@include media-breakpoint-down(md) {
 			display: flex;
 			align-items: center;
 		}
 	}
-	&__icon{
+	&__icon {
 		width: rem(26);
 		height: rem(24);
 		object-fit: contain;
 	}
-	&__item-caption{
+	&__item-caption {
 		line-height: 24px;
 		padding-top: rem(22);
-		@include media-breakpoint-down(md){
+		@include media-breakpoint-down(md) {
 			padding-top: 0;
 			padding-left: rem(20);
 		}
 	}
-	.row-items{
-		@include media-breakpoint-down(lg){
+	.row-items {
+		@include media-breakpoint-down(lg) {
 			--bs-gutter-y: #{rem(20)};
 		}
 	}

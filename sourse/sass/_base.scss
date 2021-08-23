@@ -496,3 +496,40 @@ h2 ,h5{
 	}
 }
 // NOT DEFAULT!!
+
+.btn{
+	position: relative;
+	z-index: 2;
+	color: white !important;
+	font-weight: 500;
+	line-height: 21px;
+	padding-top: rem(5);
+	padding-bottom: rem(5);
+	display: inline-flex;
+	height: rem(61);
+	align-items: center;
+	justify-content: center;
+	background: var(--bg,linear-gradient(to top, #5e8447 0%, #89a86f 100%));
+	&:hover{
+		--opacity:1;
+	}
+	&:focus{
+		box-shadow: none !important;
+	}
+	span{
+		@include mt;
+		position: absolute;
+		width: 100%;
+		top: 0;
+		left: 0;
+		height: 100%;
+		border-radius: $border-radius;
+		z-index: -1;
+		background: var(--bg-hover,linear-gradient(to bottom, #5e8447 0%, #89a86f 100%));
+		opacity: var(--opacity,0);
+	}
+}
+.btn-info{
+	--bg:linear-gradient(to top, #c39854 0%, #d4b688 100%);
+	--bg-hover:linear-gradient(to bottom, #c39854 0%, #d4b688 100%);
+}
