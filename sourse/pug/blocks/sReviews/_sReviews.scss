@@ -107,6 +107,8 @@
 		margin-bottom: rem(17);
 		border-radius: $border-radius;
 		overflow: hidden;
+		background-color: $success2;
+		z-index: -1;
 	}
 	&__body {
 		display: flex;
