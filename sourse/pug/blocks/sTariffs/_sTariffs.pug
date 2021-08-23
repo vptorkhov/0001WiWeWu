@@ -3,7 +3,20 @@ mixin sTariffs()
 	+b.SECTION.sTariffs.section#sTariffs&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sTariffs
-				
+				h2 Тарифы и&nbsp;цены
 			.row
+				mixin tariff-item(i,t, ...items)
+					.col-12.col-md-4
+						+e.card
+							+pic(`tariffs-${i}.png`,'',0)
+							+e.card-info
+								.h5!=t
+								ul
+									each item in items
+										li!=item
+				+tariff-item(1,`Личные покупки`,`0%&nbsp;комиссия;`,`бесплатное хранение на&nbsp;складе до&nbsp;30&nbsp;дней;`,`объединение заказов в&nbsp;одну посылку.`)
+				+tariff-item(2,`Совместные покупки`,`Комиссия&nbsp;5%;`,`бесплатное хранение на&nbsp;складе до&nbsp;60&nbsp;дней;`,`объединение заказов в&nbsp;одну посылку.`)
+				+tariff-item(3,`Виртуальный адрес`,`0,5&nbsp;&euro;/кг каждой посылки;`,`бесплатное хранение на&nbsp;складе до&nbsp;60&nbsp;дней;`,`объединение заказов в&nbsp;одну посылку.`)
+			+e.btn-wrap
+				+e.btn(href="#") Заказать
 	// end sTariffs

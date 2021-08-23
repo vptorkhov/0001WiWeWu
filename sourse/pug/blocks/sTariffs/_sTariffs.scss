@@ -1,29 +1,122 @@
+// start .sTariffs
+.sTariffs {
+	--sPT: #{rem(90)};
+	--sPB: #{rem(108)};
+	.row {
+		@include media-breakpoint-up(md) {
+			--bs-gutter-x: #{rem(34.49)};
+		}
+	}
+	&__card {
+		position: relative;
+		background-color: $light;
+		border-radius: $border-radius;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@include media-breakpoint-up(md) {
+			min-height: rem(485);
+			padding: 0;
+		}
+	}
+	picture {
+		width: 100%;
+		img {
+			max-width: none;
+			width: 100%;
+		}
+	}
+	&__card-info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: absolute;
+		top: 33.4%;
+		border-radius: $border-radius;
+		background-color: #ffffff;
+		box-shadow: 0 7px $small 3px rgba(202, 207, 221, 0.08);
+		max-width: 70.3%;
+		padding-top: rem(40);
+		padding-bottom: rem(47);
+		.h5 {
+			text-align: center;
+			font-weight: 700;
+			line-height: 24px;
+			@include media-breakpoint-up(md) {
+				max-width: rem(140);
+			}
+		}
+		ul {
+			padding-top: rem(13);
+			li {
+				position: relative;
+				list-style-type: none;
+				padding-left: rem(60);
+				color: $secondary;
+				line-height: 24px;
+				&::before {
+					content: "";
+					position: absolute;
+					background-image: url("../img/svg/tariffs-marker.svg");
+					width: rem(10);
+					height: rem(8);
+					background-size: cover;
+					top: rem(10);
+					left: rem(36);
+				}
+			}
+		}
+	}
+	&__btn-wrap {
+		display: flex;
+		justify-content: center;
+		padding-top: rem(55);
+	}
+	&__btn {
+		@extend .btn;
+		@include mt;
+		background-image: linear-gradient(to top, #5e8447 0%, #89a86f 100%);
+		font-weight: 500;
+		color:white;
+		line-height: 21px;
+		
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-up(xs) {
+	}
 
-	// start .sTariffs
-	.sTariffs {
-		 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-up(xs) {}
-	
 	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
-	//
-	@include media-breakpoint-only(xs) {}
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
-	@include media-breakpoint-only(xl) {}
-	
-	//
-	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+	@include media-breakpoint-between(md, xl) {
+	}
 
+	//
+	@include media-breakpoint-only(xs) {
+	}
+	@include media-breakpoint-only(sm) {
+	}
+	@include media-breakpoint-only(md) {
+	}
+	@include media-breakpoint-only(lg) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+
+	//
+	@include media-breakpoint-down(xl) {
+	}
+	@include media-breakpoint-down(lg) {
+	}
+	@include media-breakpoint-down(md) {
+	}
+	@include media-breakpoint-down(sm) {
+	}
+	@include media-breakpoint-down(xs) {
+	}
 } // end.sTariffs

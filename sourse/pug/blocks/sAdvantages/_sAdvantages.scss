@@ -38,25 +38,19 @@
 	&__btn-wrap {
 		display: flex;
 		justify-content: center;
-		position: relative;
 	}
 	&__btn {
-		@extend .btn;
+		@extend .btn, .btn-info;
 		@include mt;
 		margin-top: rem(66);
-		color: white !important;
-		font-weight: 500;
-		line-height: 21px;
-		padding-top: rem(19);
-		padding-bottom: rem(19);
 		width: rem(270);
-		background: linear-gradient(to top, #c39854 0%, #d4b688 100%);
-		opacity: 1;
-		&:hover {
-			@include media-breakpoint-up(lg) {
-				opacity: 0.8;
-			}
-		}
+		// background: linear-gradient(to top, #c39854 0%, #d4b688 100%);
+		// opacity: 1;
+		// &:hover {
+		// 	@include media-breakpoint-up(lg) {
+		// 		opacity: 0.8;
+		// 	}
+		// }
 	}
 	@include media-breakpoint-up(xl) {
 	}
