@@ -3,8 +3,13 @@
 	--sPT: #{rem(90)};
 	--sPB: #{rem(108)};
 	.row {
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up(lg) {
 			--bs-gutter-x: #{rem(34.49)};
+		}
+		@include media-breakpoint-down(lg){
+			--bs-gutter-y:#{rem(30)};
+			flex-direction: column;
+			align-items: center;
 		}
 	}
 	&__card {
@@ -14,9 +19,15 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up(lg) {
 			min-height: rem(485);
 			padding: 0;
+		}
+		@include media-breakpoint-between(md,lg){
+			min-height: rem(600);
+		}
+		@include media-breakpoint-down(md){
+			min-height: rem(450);
 		}
 	}
 	picture {
@@ -31,18 +42,24 @@
 		flex-direction: column;
 		align-items: center;
 		position: absolute;
-		top: 33.4%;
+		@include media-breakpoint-up(lg){
+			top: 33.4%;
+		}
+		@include media-breakpoint-up(md){
+			top: 45%;
+		}
+		top:35%;
 		border-radius: $border-radius;
 		background-color: #ffffff;
 		box-shadow: 0 7px $small 3px rgba(202, 207, 221, 0.08);
 		max-width: 70.3%;
 		padding-top: rem(40);
-		padding-bottom: rem(47);
+		padding-bottom: rem(23);
 		.h5 {
 			text-align: center;
 			font-weight: 700;
 			line-height: 24px;
-			@include media-breakpoint-up(md) {
+			@include media-breakpoint-up(lg) {
 				max-width: rem(140);
 			}
 		}
@@ -52,8 +69,15 @@
 				position: relative;
 				list-style-type: none;
 				padding-left: rem(60);
+				@include media-breakpoint-down(md){
+					padding-left: rem(50);
+				}
 				color: $secondary;
 				line-height: 24px;
+				max-width: rem(300);
+				@include media-breakpoint-up(lg){
+					max-width: rem(260);
+				}
 				&::before {
 					content: "";
 					position: absolute;
@@ -63,6 +87,10 @@
 					background-size: cover;
 					top: rem(10);
 					left: rem(36);
+					@include media-breakpoint-down(md){
+						left: rem(30);
+						top: rem(8);
+					}
 				}
 			}
 		}
@@ -75,11 +103,7 @@
 	&__btn {
 		@extend .btn;
 		@include mt;
-		background-image: linear-gradient(to top, #5e8447 0%, #89a86f 100%);
-		font-weight: 500;
-		color:white;
-		line-height: 21px;
-		
+		width: rem(171);
 	}
 	@include media-breakpoint-up(xl) {
 	}
