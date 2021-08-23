@@ -5,6 +5,9 @@
 	--sPB: #{rem(108)};
 	.col-picture {
 		padding: 0;
+		picture{
+			height: rem(532);
+		}
 	}
 	.h2 {
 		line-height: rem(60);
