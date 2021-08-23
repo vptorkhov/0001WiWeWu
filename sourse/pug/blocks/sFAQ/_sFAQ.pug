@@ -1,9 +1,29 @@
 mixin sFAQ()
 	// start sFAQ
-	+b.SECTION.sFAQ.section#sFAQ&attributes(attributes)
+	+b.SECTION.sFAQ.section.bg-wrap#sFAQ&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sFAQ
-				
 			.row
+				.col-12.col-lg-6
+					.h2 Частые вопросы
+					.accordion
+						mixin acc-item(t,c)
+							.accordion-item
+								.accordion-button(type="button")!=t 
+								.accordion-collapse
+									if c
+										.accordion-body!=c
+									else
+										.accordion-body Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui repudiandae ad id reprehenderit impedit porro maiores saepe praesentium tempora! Magni!
+						+acc-item(`Как быстро я&nbsp;получу свою посылку?`)
+						+acc-item(`А&nbsp;насколько это надежно? Мой заказ не&nbsp;затеряется?`)
+						+acc-item(`Что такое совместные покупки?`)
+						+acc-item(`Как работает гарантия?`)
+						+acc-item(`Мне нужно оплачивать таможенные сборы?`)
+						+acc-item(`Вы&nbsp;работаете с&nbsp;юридическими лицами?`)
+						+acc-item(`Вы&nbsp;оказываете помощь в&nbsp;выборе и&nbsp;покупке гаджетов?`)
+						+acc-item(`Как оформить заказ?`)
+						+acc-item(`Вы&nbsp;принимаете рубли?`)
+						+acc-item(`У&nbsp;вас есть доставка до&nbsp;двери?`,`Стоимость товаров в&nbsp;РФ значительно выше из-за пошлин на&nbsp;импорт. Покупая товары в&nbsp;Германии, вы&nbsp;экономите свои средства`)
+		+e.bg
+			+pic('FAQ-1.png','',0)
 	// end sFAQ

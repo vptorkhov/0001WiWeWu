@@ -1,12 +1,20 @@
 .pixel-perfect {
+<<<<<<< HEAD
 	top: -1145px;
+=======
+	top: -1233px;
+>>>>>>> 20aa2db6b1775e35f4bb0f99c6c134fdc62c4318
 	display: block;
 	@include a-cent(x);
 	pointer-events: none;
 	z-index: 1000;
 	overflow: hidden;
 	width: 100%;
+<<<<<<< HEAD
 	height: 200%;
+=======
+	height: 150%;
+>>>>>>> 20aa2db6b1775e35f4bb0f99c6c134fdc62c4318
 	background-position: center 0;
 	opacity: 0;
 	// opacity: 0.7;
@@ -256,11 +264,11 @@ ul {
 	}
 
 	&__content {
-		opacity: 0;
-		@include mt;
+		// opacity: 0;
+		// @include mt;
 		&.active {
 			display: block;
-			opacity: 1;
+			// opacity: 1;
 		}
 
 		display: none;
@@ -511,7 +519,7 @@ h2 ,h5{
 	align-items: center;
 	justify-content: center;
 	background: var(--bg,linear-gradient(to top, #5e8447 0%, #89a86f 100%));
-	&:hover{
+	&:is(.active,:hover, :active){
 		--opacity:1;
 	}
 	&:focus{
@@ -533,4 +541,9 @@ h2 ,h5{
 .btn-info{
 	--bg:linear-gradient(to top, #c39854 0%, #d4b688 100%);
 	--bg-hover:linear-gradient(to bottom, #c39854 0%, #d4b688 100%);
+}
+.btn-outline-info{
+	--bg:none;
+	--bg-hover:linear-gradient(to bottom, #c39854 0%, #d4b688 100%);
+	border: 2px solid $primary;
 }

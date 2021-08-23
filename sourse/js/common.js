@@ -121,7 +121,7 @@ const JSCCommon = {
 
 	// tabs  .
 	tabscostume(tab) {
-		// const tabs = document.querySelectorAll(tab);
+		const tabs = document.querySelectorAll(tab);
 		// const indexOf = element => Array.from(element.parentNode.children).indexOf(element);
 		// tabs.forEach(element => {
 		// 	let tabs = element;
@@ -166,7 +166,9 @@ const JSCCommon = {
 			$(this)
 				.addClass('active').siblings().removeClass('active')
 				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-				.eq($(this).index()).fadeIn().addClass('active');
+				.eq($(this).index()).fadeIn(function(){
+					$(this).addClass('active')
+				});
 
 		});
 
@@ -284,7 +286,7 @@ const $ = jQuery;
 function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
-	// JSCCommon.tabscostume('tabs');
+	JSCCommon.tabscostume('tabs');
 	// JSCCommon.mobileMenu();
 	// JSCCommon.inputMask();
 	// JSCCommon.sendForm();
@@ -299,7 +301,6 @@ function eventHandler() {
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
-
 
 	function setFixedNav() {
 		let topNav = document.querySelector('.top-nav  ');
@@ -396,6 +397,11 @@ function eventHandler() {
 	});
 	// modal window
 
+	$('.accordion-button').click(function(){
+		$(this).toggleClass('active')
+		.next().slideToggle();
+	}
+	);
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

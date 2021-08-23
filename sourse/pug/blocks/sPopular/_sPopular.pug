@@ -3,7 +3,29 @@ mixin sPopular()
 	+b.SECTION.sPopular.section#sPopular&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sPopular
-				
-			.row
+				h2 Популярное
+			.tabs
+				.tabs__caption
+					.tabs__btn.active Магазины
+						span
+					.tabs__btn Категории
+						span
+					.tabs__btn Товары
+						span
+				mixin content(t)
+					.row
+						- for (var x = 0; x < 8; x++)
+							.col-sm-6.col-lg-3
+								.content-item
+									+pic('popular-1.png','',0)
+									.h5!=t
+									p Широкий выбор товаров для дома и&nbsp;семьи. Спортивная одежда и&nbsp;аксессуары, одежда и&nbsp;обувь для взрослых и&nbsp;детей, нижнее белье, инструменты для творчества.
+									.detail(href="#") подробнее
+				.tabs__content-wrap
+					.tabs__content.active
+						+content('Tchibo')
+					.tabs__content 
+						+content('Кофе')
+					.tabs__content
+						+content('Магазин Tchibo')
 	// end sPopular
