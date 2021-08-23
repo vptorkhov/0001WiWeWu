@@ -3,7 +3,44 @@ mixin sReviews()
 	+b.SECTION.sReviews.section#sReviews&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sReviews
-				
-			.row
+				h2 Отзывы наших клиентов
+			+e.slider-wrap
+				+e.slider--js.swiper-container 
+					.swiper-wrapper
+						mixin slide(i, p)
+							+e.slide.swiper-slide
+								+b.rew-item
+									+e.head
+										+pic(`reviews-${i}.jpg`,'bg',0).picture-bg
+									+e.body
+										.row.align-items-center
+											.col-auto
+												+b.star-block 
+													+icon("star", "active")
+													+icon("star", "active")
+													+icon("star", "active")
+													+icon("star", "active")
+													+icon("star")
+											.col
+												+e.date 15.07.2021
+										p!= p
+										+e.city Москва
+						+slide(`1`, `Сегодня пришли кроссовки Nike - 2 недели и они у меня. Качество супер! Спасибо)`)
+						+slide(`2`, `Сегодня пришли кроссовки Nike - 2 недели и они у меня. Качество супер! Спасибо)`)
+						+slide(`3`, `Сегодня пришли кроссовки Nike - 2 недели и они у меня. Качество супер! Спасибо)`)
+						+slide(`4`, `Сегодня пришли кроссовки Nike - 2 недели и они у меня. Качество супер! Спасибо)`)
+						+slide(`1`, `Сегодня пришли кроссовки Nike - 2 недели и они у меня. Качество супер! Спасибо)`)
+						+slide(`2`, `Сегодня пришли кроссовки Nike - 2 недели и они у меня. Качество супер! Спасибо)`)
+						+slide(`3`, `Сегодня пришли кроссовки Nike - 2 недели и они у меня. Качество супер! Спасибо)`)
+						+slide(`4`, `Сегодня пришли кроссовки Nike - 2 недели и они у меня. Качество супер! Спасибо)`)
+						+slide(`1`, `Сегодня пришли кроссовки Nike - 2 недели и они у меня. Качество супер! Спасибо)`)
+						+slide(`2`, `Сегодня пришли кроссовки Nike - 2 недели и они у меня. Качество супер! Спасибо)`)
+						+slide(`3`, `Сегодня пришли кроссовки Nike - 2 недели и они у меня. Качество супер! Спасибо)`)
+						+slide(`4`, `Сегодня пришли кроссовки Nike - 2 недели и они у меня. Качество супер! Спасибо)`)
+				.swiper-pagination
+				+e.arrows
+					+arrow
+			+e.btn-wrap
+				+e.btn(href="#") Смотреть все отзывы
+					span
 	// end sReviews
