@@ -25,6 +25,11 @@
 			}
 			.accordion-collapse{
 				display: none;
+				.accordion-body{
+					padding-bottom: rem(10);
+					color: $secondary;
+					line-height: 24px;
+				}
 			}
 			.accordion-button{
 				color: $success2;
@@ -33,6 +38,15 @@
 				font-weight: 500;
 				position: relative;
 				&.active{
+					color: $success;
+					&::after{
+						background-color: $success;
+						transform: rotate(45deg);
+					}
+					&::before{
+						background-color: $success;
+						transform: rotate(135deg);
+					}
 				}
 				&::after{
 					content:"";

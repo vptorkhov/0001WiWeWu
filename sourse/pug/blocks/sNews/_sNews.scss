@@ -2,9 +2,9 @@
 	// start .sNews
 	.sNews {
 		&__row{
-				display: grid;
-				grid-template-columns: 1fr 1fr;
-				grid-gap: 10px;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 10px;
 		}
 		&__item{
 			&:nth-child(1){
