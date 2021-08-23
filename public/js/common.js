@@ -170,7 +170,9 @@ const JSCCommon = {
 		// })
 
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-			$(this).addClass('active').siblings().removeClass('active').closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active').eq($(this).index()).fadeIn().addClass('active');
+			$(this).addClass('active').siblings().removeClass('active').closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active').eq($(this).index()).fadeIn(function () {
+				$(this).addClass('active');
+			});
 		});
 	},
 
@@ -302,8 +304,8 @@ const $ = jQuery;
 
 function eventHandler() {
 	// JSCCommon.ifie();
-	JSCCommon.modalCall(); // JSCCommon.tabscostume('tabs');
-	// JSCCommon.mobileMenu();
+	JSCCommon.modalCall();
+	JSCCommon.tabscostume('tabs'); // JSCCommon.mobileMenu();
 	// JSCCommon.inputMask();
 	// JSCCommon.sendForm();
 	// JSCCommon.heightwindow();
@@ -369,6 +371,10 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true
 	})); // modal window
+
+	$('.accordion-button').click(function () {
+		$(this).toggleClass('active').next().slideToggle();
+	});
 }
 
 ;

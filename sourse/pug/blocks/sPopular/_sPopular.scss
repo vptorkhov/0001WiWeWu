@@ -17,27 +17,26 @@
 		&__caption {
 			display: flex;
 			justify-content: center;
+			padding-bottom: rem(44);
 		}
 		&__btn {
-			@extend .btn;
+			@extend .btn, .btn-outline-info;
 			color: $success2 !important;
+			background-color: transparent !important;
 			margin-left: 7px;
 			margin-right: 7px;
-			border: 2px solid $primary;
-			--bg: none;
-			background-color: $light;
+			// border: 2px solid $primary;
+			// --bg: none;
+			// background-color: $light;
 			width: rem(202);
 			&:hover {
-				background-color: #f7f7fc;
+				border-color: transparent;
+				color:white !important;
 			}
 			&.active {
-				@extend .btn-info;
-				color: white !important;
-				border-width: 0;
+				border-color: transparent;
+				color:white !important;
 			}
-		}
-		&__content.active {
-			padding-top: rem(44);
 		}
 	}
 	.content-item {

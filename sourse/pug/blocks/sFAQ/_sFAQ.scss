@@ -20,41 +20,43 @@
 			padding-left: rem(5);
 		}
 		.accordion-item{
-			.collapse{
+			&:not(:last-child){
+				border-bottom: 2px dotted rgba(170, 181, 161, 0.5);
+			}
+			.accordion-collapse{
 				display: none;
 			}
-			.title{
+			.accordion-button{
 				color: $success2;
 				font-size: $large;
 				line-height: rem(46);
 				font-weight: 500;
-				border-bottom: 2px dotted rgba(170, 181, 161, 0.5);
-				.accordion-button{
-					position: relative;
-					&::after{
-						content:"";
-						position: absolute;
-						top: rem(26);
-						right: 0;
-						width: 12px;
-						height: 2px;
-						background-color: $success2;
-						@include media-breakpoint-up(lg){
-							right: rem(21);
-						}
+				position: relative;
+				&.active{
+				}
+				&::after{
+					content:"";
+					position: absolute;
+					top: rem(26);
+					right: 0;
+					width: 12px;
+					height: 2px;
+					background-color: $success2;
+					@include media-breakpoint-up(lg){
+						right: rem(21);
 					}
-					&::before{
-						content:"";
-						position: absolute;
-						top: rem(26);
-						right: 0;
-						width: 12px;
-						height: 2px;
-						background-color: $success2;
-						transform: rotate(90deg);
-						@include media-breakpoint-up(lg){
-							right: rem(21);
-						}
+				}
+				&::before{
+					content:"";
+					position: absolute;
+					top: rem(26);
+					right: 0;
+					width: 12px;
+					height: 2px;
+					background-color: $success2;
+					transform: rotate(90deg);
+					@include media-breakpoint-up(lg){
+						right: rem(21);
 					}
 				}
 			}

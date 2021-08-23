@@ -256,11 +256,11 @@ ul {
 	}
 
 	&__content {
-		opacity: 0;
-		@include mt;
+		// opacity: 0;
+		// @include mt;
 		&.active {
 			display: block;
-			opacity: 1;
+			// opacity: 1;
 		}
 
 		display: none;
@@ -510,7 +510,7 @@ h2 ,h5{
 	align-items: center;
 	justify-content: center;
 	background: var(--bg,linear-gradient(to top, #5e8447 0%, #89a86f 100%));
-	&:hover{
+	&:is(.active,:hover, :active){
 		--opacity:1;
 	}
 	&:focus{
@@ -532,4 +532,9 @@ h2 ,h5{
 .btn-info{
 	--bg:linear-gradient(to top, #c39854 0%, #d4b688 100%);
 	--bg-hover:linear-gradient(to bottom, #c39854 0%, #d4b688 100%);
+}
+.btn-outline-info{
+	--bg:none;
+	--bg-hover:linear-gradient(to bottom, #c39854 0%, #d4b688 100%);
+	border: 2px solid $primary;
 }

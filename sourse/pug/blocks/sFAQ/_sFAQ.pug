@@ -8,9 +8,8 @@ mixin sFAQ()
 					.accordion
 						mixin acc-item(t,c)
 							.accordion-item
-								.title
-									.accordion-button(type="button")!=t 
-								.accordion-collapse.collapse
+								.accordion-button(type="button")!=t 
+								.accordion-collapse
 									if c
 										.accordion-body!=c
 									else
