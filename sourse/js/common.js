@@ -121,7 +121,7 @@ const JSCCommon = {
 
 	// tabs  .
 	tabscostume(tab) {
-		// const tabs = document.querySelectorAll(tab);
+		const tabs = document.querySelectorAll(tab);
 		// const indexOf = element => Array.from(element.parentNode.children).indexOf(element);
 		// tabs.forEach(element => {
 		// 	let tabs = element;

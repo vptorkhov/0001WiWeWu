@@ -132,8 +132,7 @@ const JSCCommon = {
 	// /mobileMenu
 	// tabs  .
 	tabscostume(tab) {
-		// const tabs = document.querySelectorAll(tab);
-		// const indexOf = element => Array.from(element.parentNode.children).indexOf(element);
+		const tabs = document.querySelectorAll(tab); // const indexOf = element => Array.from(element.parentNode.children).indexOf(element);
 		// tabs.forEach(element => {
 		// 	let tabs = element;
 		// 	const tabsCaption = tabs.querySelector(".tabs__caption");
@@ -169,6 +168,7 @@ const JSCCommon = {
 		// 		});
 		// 	})
 		// })
+
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
 			$(this).addClass('active').siblings().removeClass('active').closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active').eq($(this).index()).fadeIn().addClass('active');
 		});
