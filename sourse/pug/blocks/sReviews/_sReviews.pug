@@ -10,8 +10,8 @@ mixin sReviews()
 						mixin slide(i, p)
 							+e.slide.swiper-slide
 								+b.rew-item
-									+e.head.picture-bg
-										+pic(`reviews-${i}.jpg`,'bg',0)
+									+e.head
+										+pic(`reviews-${i}.jpg`,'bg',0).picture-bg
 									+e.body
 										.row.align-items-center
 											.col-auto
