@@ -87,7 +87,11 @@
 	.row-items {
 		margin-top: 20px;
 	}
+	.col-problem{
+		height: auto;
+	}
 	&__item {
+		height: 100%;
 		box-shadow: 0 7px $small 3px rgba(202, 207, 221, 0.08);
 		background-color: #fff;
 		border-radius: $border-radius;

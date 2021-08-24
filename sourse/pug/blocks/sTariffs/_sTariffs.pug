@@ -6,7 +6,7 @@ mixin sTariffs()
 				h2 Тарифы и&nbsp;цены
 			.row
 				mixin tariff-item(i,t, ...items)
-					.col-8.col-lg-4
+					.col-8.col-lg-4.col-info
 						+e.card
 							+pic(`tariffs-${i}.png`,'',0)
 							+e.card-info
