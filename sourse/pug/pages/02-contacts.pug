@@ -1,33 +1,36 @@
 extends layout/main.pug
 
 
-include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug 
-include ../blocks/sAdvantages/_sAdvantages.pug 
-include ../blocks/sProblems/_sProblems.pug 
-include ../blocks/sTariffs/_sTariffs.pug 
-include ../blocks/sFAQ/_sFAQ.pug 
-include ../blocks/sReviews/_sReviews.pug 
-include ../blocks/sPopular/_sPopular.pug 
-include ../blocks/sNews/_sNews.pug 
+//- include ../blocks/sAdvantages/_sAdvantages.pug 
+//- include ../blocks/sProblems/_sProblems.pug 
+//- include ../blocks/sTariffs/_sTariffs.pug 
+//- include ../blocks/sFAQ/_sFAQ.pug 
+//- include ../blocks/sReviews/_sReviews.pug 
+//- include ../blocks/sPopular/_sPopular.pug 
+//- include ../blocks/sNews/_sNews.pug 
 
 block variables
 	- let  mainPage= null
 	- let  bg= '02-contacts.png'
 block title
-	- let  title= 'WiWeWu'
+	- let  title= 'Контакты'
 	title= title
 block pagecontent 
 	//- +mob-mnu()
 	+header()
 		+top-nav()
 		+topLine()
-	+headerBlock()
-	+sAdvantages()
-	+sProblems()
-	+sTariffs()
-	+sFAQ()
-	+sReviews()
-	+sPopular()
-	+sNews()
+	.container
+		+breadcrumb(`Главная`, title)
+	+sContact()
+	//- +headerBlock()
+	//- +sAdvantages()
+	//- +sProblems()
+	//- +sTariffs()
+	//- +sFAQ()
+	//- +sReviews()
+	//- +sPopular()
+	//- +sNews()
 	+footer()
