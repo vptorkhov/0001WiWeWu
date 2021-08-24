@@ -1,36 +1,66 @@
- 
-	  
-.soc{
+.soc {
 	margin: 0 rem(-5px);
 	display: flex;
-	&__item{
+	&__item {
 		text-decoration: none !important;
 		margin: 0 rem(5px);
 		vertical-align: middle;
 		@include mt;
 		display: block;
-		&:hover{
-		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
-			opacity: .6 ;
+		&:hover {
+			// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
+			opacity: 0.6;
 		}
-		
 	}
-	.icon{
-	font-size: rem(30);
+	.icon {
+		font-size: rem(30);
 	}
-	 
-
+	&--footer {
+		margin: 0;
+		.soc__item {
+			position: relative;
+			width: rem(42);
+			height: rem(42);
+			border-radius: 8px;
+			background-color: $dark;
+			margin: 0 rem(4.5px);
+			.icon {
+				@include mt;
+				@include a-cent;
+				color: #717171;
+				&-fb-footer {
+					font-size: rem(18);
+				}
+				&-youtube-footer {
+					font-size: rem(19);
+				}
+				&-instagram-footer {
+					font-size: rem(17);
+				}
+				&-google-footer {
+					font-size: rem(16);
+				}
+				&-twitter-footer {
+					font-size: rem(16);
+				}
+			}
+			&:hover {
+				opacity: .7;
+				.icon {
+					color: $white;
+				}
+			}
+		}
+	}
 }
- 
 
-.counter{
+.counter {
 	counter-reset: num;
 	&__item {
-		position: relative; 
+		position: relative;
 		&::before {
 			content: counter(num);
 			counter-increment: num;
 		}
 	}
 }
-
