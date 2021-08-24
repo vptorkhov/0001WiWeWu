@@ -8,20 +8,45 @@ mixin mob-mnu()
 		//- request.responseType = 'json';
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
-	+b.toggle-menu-mobile--js.d-lg-none
-		span
 	+b.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
-		
 			+mnu()
-			.text-right
+			+b.topLine.p-3
+				.mb-4
+					.strong.mb-2
+							a.text-body(href="mailto:info@newclients1.ru") info@newclients1.ru
+					.small.text-secondary Санкт-Петербург
+
+				.tell.strong.mb-2
+					a.text-body(href="tel:+7(812)703-86-28") 
+						+icon("watsapp")
+						| +7 (812) 703-86-28
+				.small.text-secondary.mb-2  Пн-Пт: c 09:00 до 20:00
+				+e.btn(href="#").w-100 Заказать звонок
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			+mnu()
-					
+			.row
+				.col
+					+b.menu-mobile--js
+						+b.toggle-menu-mobile--js.d-lg-none
+							span
+						+e.inner
+							+mnu()
+							+b.topLine.p-3.d-lg-none
+								.mb-4
+									.strong.mb-2
+											a.text-body(href="mailto:info@newclients1.ru") info@newclients1.ru
+									.small.text-secondary Санкт-Петербург
+
+								.tell.strong.mb-2
+									a.text-body(href="tel:+7(812)703-86-28")
+										+icon("watsapp")
+										| +7 (812) 703-86-28
+								.small.text-secondary.mb-2  Пн-Пт: c 09:00 до 20:00
+								+e.btn(href="#").w-100 Заказать звонок
 	// end top-nav

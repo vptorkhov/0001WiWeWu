@@ -1,10 +1,6 @@
 mixin headerBlock()
 	// start headerBlock
-	+b.headerBlock.section#headerBlock&attributes(attributes)
+	+b.headerBlock.section.bg-wrap#headerBlock&attributes(attributes)
+		+pic('headerblock-bg.png','bg',0).picture-bg
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
-			.row
-						
 	// end headerBlock

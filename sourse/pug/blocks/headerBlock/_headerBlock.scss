@@ -1,22 +1,9 @@
 // start .headerBlock
 .headerBlock {
-	margin-bottom: 1px;
-	//min-height: 100vh;
-	//min-height: calc(var(--vh, 1vh) * 100);
-	// background-image: url(../img);
-	// background-color: #000000;
-
-	h1 {
-		margin-bottom: 1px;
+	
+	@include media-breakpoint-up(lg) {
+		min-height: rem(827);
 	}
-
-	h2 {
-		margin-bottom: 1px;
-	}
-
-	@include media-breakpoint-up(xl) {}
-
-	@include media-breakpoint-up(lg) {}
 
 	@include media-breakpoint-up(md) {}
 

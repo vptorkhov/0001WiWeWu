@@ -1,7 +1,46 @@
 
 	// start .topLine
 	.topLine {
-		 
+		@include media-breakpoint-up(sm) {
+			--sPT: #{rem(24)};
+		}
+		--sPT: #{rem(14)};
+		--sPB: #{rem(14)};
+		.row{
+			align-items: center;
+			@include media-breakpoint-up(xl) {
+				 --bs-gutter-x: 44px;
+				}
+			}
+			&__btn{
+				@extend .btn;
+				@include media-breakpoint-up(lg) {
+			 	width: rem(171);
+				}
+		 }
+		 a.text-body{
+			 position: relative;
+			 .icon{
+				 @include media-breakpoint-up(md) {
+
+					 top: rem(2);
+					 right: 100%;
+					 position: absolute;
+					 margin-right: rem(14);
+					}
+				 font-size: rem(20);
+			 }
+		 }
+		 @include media-breakpoint-up(md){
+
+			 &__cont-item {
+				 margin-left: rem(30);
+				}
+			}
+		 &__text{
+			 max-width: rem(180);
+			 font-size: rem(13);
+		 }
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -24,6 +63,10 @@
 	@include media-breakpoint-down(lg) {}
 	@include media-breakpoint-down(md) {}
 	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+	@include media-breakpoint-down(xs) {
+		.row{
+			--bs-gutter-x: 10px
+		}
+	} 
 
 } // end.topLine

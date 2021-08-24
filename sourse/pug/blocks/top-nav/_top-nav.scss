@@ -1,33 +1,10 @@
 .top-nav {
-	padding-top: 15px;
-	// position: absolute;
-	top: 100%;
-	// @include clearfix;ss
-	z-index: 20;
-	padding-top: 3px;
-	@include mt;
-	padding-bottom: 10px;
-	top: 0;
-	left: 0;
-	width: 100%;
+	@include media-breakpoint-up(lg) {
 
-	&.fixed {
-		width: 100vw;
-		bottom: auto;
-		margin-top: 0;
-		background-color: #fff;
 	}
-
-	&__nav {
-		text-align: center;
-		list-style-type: none;
-	}
-
-	&__item {
-		display: inline-block;
-		list-style-type: none;
-	}
-
+	position: relative;
+	z-index: 1000;
+	// background: svg-load('../svg/check.svg',  stroke=$primary); 
 	// 
 	@include media-breakpoint-up(xl) {}
 
@@ -64,3 +41,5 @@
 
 	@include media-breakpoint-down(xs) {}
 }
+
+
