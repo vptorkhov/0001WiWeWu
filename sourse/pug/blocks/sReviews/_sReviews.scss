@@ -1,5 +1,7 @@
 // start .sReviews
 .sReviews {
+	--sPT:#{rem(95)};
+	--sPB:#{rem(104)};
 	@include media-breakpoint-up(xxl) {
 		--swiperArrowPosition: -110px;
 	}

@@ -19,7 +19,7 @@ mixin sProblems()
 					+e.description Наша компания поможет решить эти нюансы. С&nbsp;нами&nbsp;Вы сможете покупать одежду, обувь, гаджеты, косметику или украшения европейского качества без переплат на&nbsp;любых онлайн-площадках Германии.
 			.row.row-items
 				mixin item(i,t)
-					.col-12.col-md-6.col-lg-3
+					.col-12.col-md-6.col-lg-3.col-problem
 						+e.item
 							+e.IMG.icon(src=`img/svg/problems-${i}.svg`)
 							+e.item-caption!=t

@@ -32,6 +32,7 @@
 				}
 			}
 			.accordion-button{
+				cursor: pointer;
 				color: $success2;
 				font-size: $large;
 				line-height: rem(46);
@@ -83,7 +84,7 @@
 		z-index: -4;
 		position: absolute;
 		bottom: 0;
-		right: -0.5%;
+		right: rem(-10);
 		// width: rem(1115);
 		// height:rem(752);
 		width: 58.6%;

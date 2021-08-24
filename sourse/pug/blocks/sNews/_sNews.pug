@@ -3,9 +3,25 @@ mixin sNews()
 	+b.SECTION.sNews.section#sNews&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sNews
+				h2 Новости
 			+e.row
-				+e.item 1
-				+e.item 2
-				+e.item 3
+				+e.item.bg-wrap
+					+pic('news-1.png','bg',0).picture-bg
+					.title Новые таможенные правила на&nbsp;ввоз товаров
+					a(href='#') подробнее
+				+e.item
+					+pic('news-2','',0)
+					+e.caption
+						+e.caption-title Новые таможенные правила на&nbsp;ввоз товаров
+						+e.caption-text с&nbsp;01.07.2021 отменяется беспошлинный лимит на&nbsp;ввоз товаров в&nbsp;Германию из&nbsp;стран не&nbsp;входящих в&nbsp;евросоюз
+						a(href='#') подробнее
+				+e.item
+					+pic('news-3','',0)
+					+e.caption
+						+e.caption-title Новые таможенные правила на&nbsp;ввоз товаров
+						+e.caption-text с&nbsp;01.07.2021 отменяется беспошлинный лимит на&nbsp;ввоз товаров в&nbsp;Германию из&nbsp;стран не&nbsp;входящих в&nbsp;евросоюз
+						a(href='#') подробнее
+			+e.btn-wrap
+				+e.btn(href="#") Смотреть все новости
+					span
 	// end sNews

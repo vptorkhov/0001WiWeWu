@@ -5,9 +5,18 @@ mixin sTariffs()
 			+b.section-title.text-center
 				h2 Тарифы и&nbsp;цены
 			.row
+				//- mixin tariff-item(i,t, ...items)
+				//- 	.col-8.col-lg-4.col-info
+				//- 		+e.card
+				//- 			+pic(`tariffs-${i}.png`,'',0)
+				//- 			+e.card-info
+				//- 				.h5!=t
+				//- 				ul
+				//- 					each item in items
+				//- 						li!=item
 				mixin tariff-item(i,t, ...items)
-					.col-8.col-lg-4
-						+e.card
+					.col-8.col-lg-4.col-info
+						+e.card.bg-wrap
 							+pic(`tariffs-${i}.png`,'',0)
 							+e.card-info
 								.h5!=t
