@@ -3,6 +3,7 @@
 	background-color: white;
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(34)};
+		--sPB: #{rem(35)};
 	}
 	--sPT: #{rem(20)};
 	--sPB: #{rem(0)};
@@ -133,4 +134,7 @@
 } // end.topLine
 .body-main .topLine{
 	background-color: transparent;
+	@include media-breakpoint-up(sm){
+		--sPB: 0;
+	}
 }
