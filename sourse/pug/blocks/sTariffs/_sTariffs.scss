@@ -28,9 +28,6 @@
 			padding-top: rem(162);
 			padding-bottom: rem(54);
 		}
-		@include media-breakpoint-between(md, lg) {
-			min-height: rem(600);
-		}
 		@include media-breakpoint-down(md) {
 			min-height: rem(450);
 		}
