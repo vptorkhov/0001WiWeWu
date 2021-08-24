@@ -1,6 +1,17 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section.bg-wrap#headerBlock&attributes(attributes)
-		+pic('headerblock-bg.png','bg',0).picture-bg.d-none.d-lg-block
+		+pic('headerblock-bg.png','bg',0).picture-bg
 		.container
+			.row
+				.col-12.col-lg-6.col-hblock
+					h1 Экономьте до&nbsp;80% на&nbsp;покупках товаров из&nbsp;Германии
+					+e.caption А&nbsp;мы&nbsp;поможем купить любой товар, проверим качество и&nbsp;доставим к&nbsp;Вам домой
+					+e.btn-wrap
+						+e.btn-1(href="#") Подробнее о&nbsp;сервисе
+							span
+						+e.btn-2(href="#") Начать покупки
+							span
+					+e.sale
+						+pic('headerblock-sale.png','',0).d-none.d-lg-block
 	// end headerBlock

@@ -1,6 +1,6 @@
 // start .sAdvantages
 .sAdvantages {
-	--sPT: #{rem(102)};
+	--sPT: #{rem(88)};
 	--sPB: #{rem(87)};
 	@include media-breakpoint-down(sm) {
 		--sPT: #{rem(102) * 0.5};

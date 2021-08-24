@@ -26,6 +26,9 @@
 			.accordion-collapse{
 				display: none;
 				.accordion-body{
+					@include media-breakpoint-up(lg){
+						max-width: 90%;
+					}
 					padding-bottom: rem(10);
 					color: $secondary;
 					line-height: 24px;
