@@ -50,6 +50,7 @@
 					}
 				}
 				&::after{
+					@include mt;
 					content:"";
 					position: absolute;
 					top: rem(26);
@@ -62,6 +63,7 @@
 					}
 				}
 				&::before{
+					@include mt;
 					content:"";
 					position: absolute;
 					top: rem(26);
