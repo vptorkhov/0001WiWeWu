@@ -299,8 +299,8 @@ const $ = jQuery;
 function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
-	JSCCommon.tabscostume('tabs'); // JSCCommon.mobileMenu();
-	// JSCCommon.inputMask();
+	JSCCommon.tabscostume('tabs');
+	JSCCommon.mobileMenu(); // JSCCommon.inputMask();
 	// JSCCommon.sendForm();
 	// JSCCommon.heightwindow();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
@@ -403,6 +403,10 @@ function eventHandler() {
 		}
 	}); // modal window
 
+	$(".menu-mobile--js  .menu-item-has-children>a").click(function (e) {
+		e.preventDefault();
+		$(this).toggleClass('active').next().slideToggle();
+	});
 	$('.accordion-button').click(function () {
 		$(this).toggleClass('active').next().slideToggle();
 	});

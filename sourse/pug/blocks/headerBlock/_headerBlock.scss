@@ -1,6 +1,8 @@
 // start .headerBlock
 .headerBlock {
-	
+	margin-top: rem(-102);
+	background-color: $light;
+	z-index: -4;
 	@include media-breakpoint-up(lg) {
 		min-height: rem(827);
 	}
@@ -40,3 +42,9 @@
 }
 
 // end.headerBlock
+
+@media screen and(min-width:2200px) {
+	.headerBlock{
+		min-height: rem(1000);
+	}
+}

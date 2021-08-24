@@ -5,22 +5,23 @@ mixin topLine()
 			.row
 				.col-lg-auto.col
 					a(href="/")
-						img.res-i(src="img/@2x/logo.png", alt="")
+						img.res-i.logo(src="img/@2x/logo.png", alt="")
 				.col.d-none.d-lg-block
-					+e.text.text-secondary Продвигаем сайты в самых конкурентных тематиках
-				.col-auto.d-none.d-lg-block
-					.strong.mb-2
-						a.text-body(href="mailto:info@newclients1.ru") info@newclients1.ru
-					.small.text-secondary Санкт-Петербург
-				+e.cont-item.col-auto 
-					.strong.mb-md-2
-						a.text-body(href="tel:+7(812)703-86-28") 
-							span.d-none.d-sm-inline 
-								+icon("watsapp")
-							span  +7 (812) 703-86-28
-					.small.text-secondary.d-none.d-md-block  Пн-Пт: c 09:00 до 20:00
+					+e.text.text-secondary доставка товаров из&nbsp;Германии в&nbsp;любую точку мира
+				.col-auto.d-none.d-lg-block.col-time
+					.time пн-пт: с&nbsp;9:00 до&nbsp;18:00 
+						span по&nbsp;Берлину
+					a.email(href="mailto:support@wiwewu.com") support@wiwewu.com
+				+e.soc-item.col-auto
+					a(href="#")
+						img(src='img/svg/telegram.svg')
+					a(href="#")
+						img(src='img/svg/viber.svg')
+					a(href="#")
+						img(src='img/svg/whatsapp.svg')
 				.col-auto.d-none.d-md-block
-					+e.btn(href="#") Заказать звонок
+					.tel 8&nbsp;800 000-00-00
+					a.call(href="#") Заказать звонок
 				.col-auto.d-lg-none
 					+b.toggle-menu-mobile--js
 						span

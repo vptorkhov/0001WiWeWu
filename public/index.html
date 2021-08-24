@@ -15,7 +15,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&amp;display=swap" rel="stylesheet"/>
 	</head>
-	<body data-bg="index.jpg">
+	<body class="body-main" data-bg="index.jpg">
 		<div class="main-wrapper">
 			<!-- start header-->
 			<header class="header" id="header">
@@ -28,55 +28,38 @@
 									<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
 									</div>
 									<div class="menu-mobile__inner">
-										<ul class="menu-mobile__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-											<li class="menu-mobile__item" itemprop="item">
-												<a class="menu-mobile__link" href="/" itemprop="url">Главная
-												</a>
+										<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+											<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">О компании</a>
+												<ul class="sub-menu">
+													<li><a href=""> Наименование услуги</a></li>
+													<li><a href=""> Наименование услуги</a></li>
+													<li><a href=""> Наименование услуги</a></li>
+												</ul>
 											</li>
-											<li class="menu-mobile__item" itemprop="item">
-												<a class="menu-mobile__link" href="#" itemprop="url">Услуги  
-												</a>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Как мы работаем</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Тарифы</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Услуги</a></li>
+											<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">Магазины</a>
+												<ul class="sub-menu">
+													<li><a href=""> Магазин</a></li>
+													<li><a href=""> Магазин</a></li>
+													<li><a href=""> Магазин</a></li>
+												</ul>
 											</li>
-											<li class="menu-mobile__item" itemprop="item">
-												<a class="menu-mobile__link" href="#" itemprop="url">Подбор септика   
-												</a>
-											</li>
-											<li class="menu-mobile__item" itemprop="item">
-												<a class="menu-mobile__link" href="#" itemprop="url">Акции 
-												</a>
-											</li>
-											<li class="menu-mobile__item" itemprop="item">
-												<a class="menu-mobile__link" href="#" itemprop="url"> О компании  
-												</a>
-											</li>
-											<li class="menu-mobile__item" itemprop="item">
-												<a class="menu-mobile__link" href="#" itemprop="url"> Доставка и оплата 
-												</a>
-											</li>
-											<li class="menu-mobile__item" itemprop="item">
-												<a class="menu-mobile__link" href="#" itemprop="url"> Клиентам  
-												</a>
-											</li>
-											<li class="menu-mobile__item" itemprop="item">
-												<a class="menu-mobile__link" href="#" itemprop="url"> Наши работы   
-												</a>
-											</li>
-											<li class="menu-mobile__item" itemprop="item">
-												<a class="menu-mobile__link" href="#sContact" itemprop="url">Контакты 
-												</a>
-											</li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор Доставки</a></li>
+											<li class="menu-item login" itemprop="item"><a href="#" itemprop="url">Регистрация&nbsp;/ Вход</a></li>
 										</ul>
 										<div class="topLine p-3 d-lg-none">
 											<div class="mb-4">
 												<div class="strong mb-2"><a class="text-body" href="mailto:info@newclients1.ru">info@newclients1.ru</a></div>
-												<div class="small text-secondary">Санкт-Петербург</div>
+												<div class="small text-secondary add-info">Санкт-Петербург</div>
 											</div>
 											<div class="tell strong mb-2"><a class="text-body" href="tel:+7(812)703-86-28">
-													<svg class="icon icon-watsapp ">
-														<use xlink:href="img/svg/sprite.svg#watsapp"></use>
+													<svg class="icon icon-whatsapp ">
+														<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
 													</svg>+7 (812) 703-86-28</a></div>
-											<div class="small text-secondary mb-2"> Пн-Пт: c 09:00 до 20:00</div>
-											<a class="topLine__btn w-100" href="#">Заказать звонок
+											<div class="small text-secondary mb-2 add-info">Пн-Пт: c 09:00 до 20:00</div>
+											<a class="topLine__btn w-100 btn-menu" href="#">Заказать звонок
 											</a>
 										</div>
 									</div>
@@ -90,25 +73,18 @@
 				<div class="topLine section" id="topLine">
 					<div class="container">
 						<div class="row">
-							<div class="col-lg-auto col"><a href="/"><img class="res-i" src="img/@2x/logo.png" alt=""/></a></div>
+							<div class="col-lg-auto col"><a href="/"><img class="res-i logo" src="img/@2x/logo.png" alt=""/></a></div>
 							<div class="col d-none d-lg-block">
-								<div class="topLine__text text-secondary">Продвигаем сайты в самых конкурентных тематиках
+								<div class="topLine__text text-secondary">доставка товаров из&nbsp;Германии в&nbsp;любую точку мира
 								</div>
 							</div>
-							<div class="col-auto d-none d-lg-block">
-								<div class="strong mb-2"><a class="text-body" href="mailto:info@newclients1.ru">info@newclients1.ru</a></div>
-								<div class="small text-secondary">Санкт-Петербург</div>
+							<div class="col-auto d-none d-lg-block col-time">
+								<div class="time">пн-пт: с&nbsp;9:00 до&nbsp;18:00 <span>по&nbsp;Берлину</span></div><a class="email" href="mailto:support@wiwewu.com">support@wiwewu.com</a>
 							</div>
-							<div class="topLine__cont-item col-auto"> 
-								<div class="strong mb-md-2"><a class="text-body" href="tel:+7(812)703-86-28"> <span class="d-none d-sm-inline"> 
-											<svg class="icon icon-watsapp ">
-												<use xlink:href="img/svg/sprite.svg#watsapp"></use>
-											</svg></span><span> +7 (812) 703-86-28</span></a></div>
-								<div class="small text-secondary d-none d-md-block"> Пн-Пт: c 09:00 до 20:00</div>
+							<div class="topLine__soc-item col-auto"><a href="#"><img src="img/svg/telegram.svg"/></a><a href="#"><img src="img/svg/viber.svg"/></a><a href="#"><img src="img/svg/whatsapp.svg"/></a>
 							</div>
 							<div class="col-auto d-none d-md-block">
-								<a class="topLine__btn" href="#">Заказать звонок
-								</a>
+								<div class="tel">8&nbsp;800 000-00-00</div><a class="call" href="#">Заказать звонок</a>
 							</div>
 							<div class="col-auto d-lg-none">
 								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
@@ -123,7 +99,7 @@
 			<!-- start headerBlock-->
 			<div class="headerBlock section bg-wrap" id="headerBlock">
 				<!-- picture-->
-				<picture class="picture-bg"> 
+				<picture class="picture-bg d-none d-lg-block"> 
 					<source type="image/webp" srcset="img/@2x/webp/headerblock-bg.webp"/><img class="object-fit-js" src="img/@2x/headerblock-bg.png" alt="" loading="lazy"/>
 				</picture>
 				<!-- /picture-->

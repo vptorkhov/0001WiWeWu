@@ -287,7 +287,7 @@ function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('tabs');
-	// JSCCommon.mobileMenu();
+	JSCCommon.mobileMenu();
 	// JSCCommon.inputMask();
 	// JSCCommon.sendForm();
 	// JSCCommon.heightwindow();
@@ -396,6 +396,10 @@ function eventHandler() {
 
 	});
 	// modal window
+	$(".menu-mobile--js  .menu-item-has-children>a").click(function(e){
+		e.preventDefault();
+		$(this).toggleClass('active').next().slideToggle()
+	})
 
 	$('.accordion-button').click(function(){
 		$(this).toggleClass('active')

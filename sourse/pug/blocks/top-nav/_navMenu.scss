@@ -1,123 +1,145 @@
-.menu{
-	@include media-breakpoint-up(lg){
+.menu {
+	@include media-breakpoint-up(lg) {
 		display: flex;
 		text-align: center;
 	}
-	@include roww(20px);
+	// @include roww(60px);
 	list-style: none;
-	@include media-breakpoint-up(xl){
+	@include media-breakpoint-up(xl) {
 		// --bs-gutter-x: 60px;
 	}
 	position: relative;
-	margin-bottom: 0; 
-	li{
-			@include media-breakpoint-up(lg) {
-				padding: 10px;
-			}
+	margin-bottom: 0;
+	li {
+		@include media-breakpoint-up(xl) {
+			margin-right: rem(20);
+		}
+		@include media-breakpoint-up(lg) {
+			padding: 6px;
+		}
 		// margin-left: 0;
 		// margin-right: 0;
 		// padding: 0;
 		position: relative;
 	}
-	>li> a{
+	.login {
+		@include media-breakpoint-up(lg) {
+			position: absolute;
+			top: rem(-3);
+			right: rem(-16);
+		}
+		a {
+			font-size: $small;
+			text-transform: none;
+			line-height: 21px;
+		}
+	}
+	> li > a {
 		border-radius: $border-radius;
 		&:active,
-		&:hover{
-			background-color: $primary;
+		&:hover {
+			background-color: #91ba71;
 		}
 		// background-color: $primary;
 	}
-	a{
+	a {
 		display: block;
 		position: relative;
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(lg) {
 		}
-	 
-	padding: rem(10) 10px;
 
-		color: #282828; 
-		font-size: 11px;
-		font-weight: 500; 
-		text-transform: uppercase; 
-		letter-spacing: 0.73px; 
+		padding: rem(10) 10px;
+
+		color: white;
+		font-size: rem(11);
+		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: 0.73px;
 	}
 
-
-
-.menu-item-has-children{
-	> a{
-		padding-right: rem(30);
-		&::after{
-			right: 10px;
-			content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='SVGDoc' width='9' height='6' xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink'  viewBox='0 0 9 6'%3E%3Cdefs%3E%3C/defs%3E%3Cdesc%3EGenerated with Avocode.%3C/desc%3E%3Cg%3E%3Cg%3E%3Ctitle%3EСтрелка копия 2%3C/title%3E%3Cpath d='M4.68294,5.17539l3.51265,-3.48815c0.08137,-0.08136 0.12611,-0.18756 0.12611,-0.30274c0,-0.11512 -0.04475,-0.22433 -0.12611,-0.30476l-0.25864,-0.25607c-0.16846,-0.16677 -0.44243,-0.16677 -0.61066,0l-2.94983,2.92924v0l-2.95303,-2.93225c-0.08125,-0.08038 -0.18963,-0.12508 -0.30521,-0.12508c-0.1157,0 -0.22419,0.0447 -0.30556,0.12508l-0.25852,0.25612c-0.08137,0.08141 -0.12611,0.18959 -0.12611,0.30377c0,0.11512 0.04475,0.22231 0.12611,0.30274l3.51597,3.49209c0.08148,0.08141 0.19043,0.12409 0.30624,0.12409c0.11616,0 0.22499,-0.04268 0.30659,-0.12409z' fill='%23282828' fill-opacity='1'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-			margin-left: 10px;
-			// position: relative;
-			position: absolute;
-			@include mt;
-
+	.menu-item-has-children {
+		> a {
+			padding-right: rem(30);
+			&::after {
+				right: rem(16);
+				top: rem(8);
+				content: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='SVGDoc' width='7' height='4' xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:avocode='https://avocode.com/' viewBox='0 0 7 4'%3E%3Cdefs%3E%3C/defs%3E%3Cdesc%3EGenerated with Avocode.%3C/desc%3E%3Cg%3E%3Cg%3E%3Ctitle%3EФигура 355 2 копия%3C/title%3E%3Cpath d='M3.3591,3.77435l2.67002,-2.84069c0.0618,-0.06566 0.09579,-0.15338 0.09579,-0.24706c0,-0.09343 -0.03399,-0.18114 -0.09579,-0.2468l-0.19661,-0.20917c-0.12806,-0.13625 -0.33634,-0.13625 -0.46417,0l-2.24213,2.3855v0l-2.24464,-2.38809c-0.0618,-0.06592 -0.1442,-0.10199 -0.23209,-0.10199c-0.08789,0 -0.17029,0.03607 -0.2322,0.10199l-0.1965,0.20917c-0.0618,0.06566 -0.09579,0.15338 -0.09579,0.2468c0,0.09369 0.03399,0.18114 0.09579,0.24706l2.67242,2.84329c0.06203,0.06592 0.14488,0.10199 0.23277,0.10173c0.08835,0.00026 0.17109,-0.03581 0.23312,-0.10173z' fill='%23f0f0f0' fill-opacity='1'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+				margin-left: 10px;
+				// position: relative;
+				position: absolute;
+				@include mt;
+			}
 		}
 	}
-}
 
-  a.active { 
-	&::after{
-		transform: rotateX(180deg);
-	}
-}
-li:hover {
-	>a {
-		background-color: $primary;
-		&::after{
+	a.active {
+		&::after {
 			transform: rotateX(180deg);
 		}
 	}
-		@include media-breakpoint-up(lg){
-
+	li:hover {
+		> a {
+			background-color: #91ba71;
+			&::after {
+				transform: rotateX(180deg);
+				top: 11px;
+			}
+		}
+		@include media-breakpoint-up(lg) {
 			--db: block;
 		}
-}
-.sub-menu{
-	@include media-breakpoint-up(lg){
+	}
+	.sub-menu {
+		@include media-breakpoint-up(lg) {
 			position: absolute;
 			left: 0;
 			top: calc(100% -10px);
 
 			border-radius: $border-radius;
 		}
-	background-color: #ffffff;
-	list-style: none;
-	min-width: 225px;
-	font-size: $small !important;
-	display: var(--db, none);
-	li{
-		padding: 0;
-		margin: 0;
-	}
-	a{
-		display: block;
-		text-align: left;
-		border-radius:$border-radius ;
-		padding: rem(10) rem(20) rem(10) rem(24);
-		position: relative;
-		
-		&::before{
-			content: '';
-			position: absolute;
-			left: 0;
-			top: 0;
-			height: 100%;	
-			width: 4px;
-			border-radius: 2px;
-			background-color: $primary;
-			@include mt;
-			opacity: var(--opacity,0);
+		background-color: $success;
+		list-style: none;
+		min-width: 225px;
+		font-size: $small !important;
+		display: var(--db, none);
+		li {
+			padding: 0;
+			margin: 0;
 		}
-	
-		&:hover{
-			--opacity: ' ';
-			background-color: rgba($color: $primary, $alpha: .1);
+		a {
+			display: block;
+			text-align: left;
+			border-radius: $border-radius;
+			padding: rem(10) rem(20) rem(10) rem(24);
+			position: relative;
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				height: 100%;
+				width: 4px;
+				border-radius: 2px;
+				background-color: #91ba71;
+				@include mt;
+				opacity: var(--opacity, 0);
+			}
+
+			&:hover {
+				--opacity: " ";
+				background-color: rgba($color: $primary, $alpha: 0.1);
+			}
 		}
 	}
 }
-
+.add-info{
+	@include media-breakpoint-down(lg){
+		color:black !important;
+	}
+}
+.btn-menu{
+	@include media-breakpoint-down(lg){
+		margin-top: 10px;
+	}
 }

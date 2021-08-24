@@ -1,9 +1,14 @@
 .top-nav {
 	@include media-breakpoint-up(lg) {
-
+		background-color: $success;
 	}
 	position: relative;
 	z-index: 1000;
+	.container{
+		@include media-breakpoint-up(xxl){
+			max-width: 1230px;
+		}
+	}
 	// background: svg-load('../svg/check.svg',  stroke=$primary); 
 	// 
 	@include media-breakpoint-up(xl) {}
