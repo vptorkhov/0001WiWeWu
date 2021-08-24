@@ -7,7 +7,7 @@
 	}
 	--sPT: #{rem(20)};
 	--sPB: #{rem(0)};
-	@include media-breakpoint-down(sm){
+	@include media-breakpoint-down(sm) {
 		--sPT: #{rem(12)};
 		--sPB: #{rem(35)};
 	}
@@ -25,8 +25,8 @@
 	}
 	a.text-body {
 		position: relative;
-		@include media-breakpoint-down(lg){
-			color:white !important;
+		@include media-breakpoint-down(lg) {
+			color: white !important;
 		}
 		.icon {
 			@include media-breakpoint-up(md) {
@@ -38,55 +38,63 @@
 			font-size: rem(20);
 		}
 	}
-	&__soc-item{
-		@include media-breakpoint-up(xl){
+	&__soc-item {
+		@include media-breakpoint-up(xl) {
 			margin-right: rem(-33);
 		}
-		a{
-			&:hover{
+		a {
+			&:hover {
 				opacity: 0.75;
 			}
 		}
-		img{
+		img {
 			margin-right: rem(9);
 		}
 	}
 	&__text {
 		max-width: rem(195);
 		font-size: $small;
-		@include media-breakpoint-up(xl){
+		@include media-breakpoint-up(xl) {
 			margin-left: rem(-26);
 		}
 	}
-	.col-time{
-		@include media-breakpoint-up(xl){
+	.col-time {
+		@include media-breakpoint-up(xl) {
 			margin-right: rem(17);
 		}
 	}
-	.time{
+	.time {
 		font-size: $small;
 		font-weight: 700;
-		span{
+		span {
 			color: #c3b399;
 			font-weight: 400;
 		}
 	}
-	.email{
+	.email {
 		color: $secondary;
 		font-size: $small;
+		&:hover {
+			color: $body-color;
+			font-weight: 500;
+		}
 	}
-	.logo{
+	.logo {
 		margin-bottom: rem(-10);
 	}
-	.tel{
+	.tel {
 		font-weight: 700;
 		line-height: 21px;
+		display: block;
+		&:not(:hover) {
+			color: $body-color;
+		}
 	}
-	.call{
+	.call {
 		color: $secondary;
 		font-size: $small;
-		&:hover{
-			color:$body-color;
+		&:hover {
+			color: $body-color;
 			font-weight: 500;
 		}
 	}
@@ -132,9 +140,9 @@
 		}
 	}
 } // end.topLine
-.body-main .topLine{
+.body-main .topLine {
 	background-color: transparent;
-	@include media-breakpoint-up(sm){
+	@include media-breakpoint-up(sm) {
 		--sPB: 0;
 	}
 }
