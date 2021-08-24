@@ -1,4 +1,63 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			h2 footer
+			+e.top
+				+e.logo-wrap
+					+pic(`footer-logo.png`,'',0)
+				.row
+					.col-5.col-sm-6.col-md-2.col-xl-auto
+						+e.UL.menu--first
+							li #[a(href='#') О&nbsp;нас]
+							li #[a(href='#') Отзывы]
+							li #[a(href='#') Блог]
+							li #[a(href='#') Калькулятор]
+							li #[a(href='#') Контакты]
+					.col-7.col-sm-6.col-md-3.col-xl-auto
+						+e.UL.menu--second
+							li #[a(href='#') Оплата]
+							li #[a(href='#') Доставка]
+							li #[a(href='#') Тарифы]
+							li #[a(href='#') Каталог магазинов]
+							li #[a(href='#') Ограничения и&nbsp;запреты]
+					.col-5.col-sm-6.col-md-3.col-xl-auto
+						+e.UL.menu--third
+							li #[a(href='#') Как заказать]
+							li #[a(href='#') Как мы&nbsp;работаем]
+							li #[a(href='#') Вопросы и&nbsp;ответы]
+							li #[a(href='#') Способы доставки]
+							li #[a(href='#') Помощь при покупке]
+					.col-7.col-sm-6.col-md
+						+e.contacts
+							+e.tel(href='#') 8 800 000-00-00
+							+e.shedule пн-пт: с&nbsp;9:00 до&nbsp;18:00 по&nbsp;Берлину
+							+e.email(href='#') support@wiwewu.com
+							+e.adress Адрес: Lorem ipsum dolor sit amet.
+		+e.bottom
+			.container
+				.row
+					.col
+						.row
+							.col-sm-auto
+								+soc-footer
+							.col-sm-auto
+								+e.privacy
+									a.small(href='#') Пользовательское соглашение
+									a.small(href='#') Политика конфиденциальности
+					.col
+						+e.payments
+							+b.soc--footer
+								+e.item
+									+pic(`am-express.png`,'',0)
+								+e.item
+									+pic(`visa.png`,'',0)
+								+e.item
+									+pic(`paypal.png`,'',0)
+								+e.item
+									+pic(`mastercard.png`,'',0)
+								+e.item
+									+pic(`jcb.png`,'',0)
+
+
+
+
+								
