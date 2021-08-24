@@ -45,6 +45,15 @@
 		margin-top: rem(66);
 		width: rem(270);
 	}
+	&--tariff{
+		--sPB:#{rem(136)};
+		.section-title{
+			padding-bottom: rem(43);
+		}
+		.h5{
+			padding-top: rem(3) !important;
+		}
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
