@@ -1,5 +1,7 @@
 // start .topLine
 .topLine {
+	z-index: 2;
+	position: relative;
 	background-color: white;
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(34)};

@@ -1,12 +1,94 @@
 // start .headerBlock
 .headerBlock {
+	z-index: 1;
+	position: relative;
 	margin-top: rem(-102);
+	@include media-breakpoint-up(xxl){
+		margin-top: rem(-76);
+	}
 	background-color: $light;
-	z-index: -4;
 	@include media-breakpoint-up(lg) {
 		min-height: rem(827);
 	}
-
+	.col-hblock{
+		position: relative;
+	}
+	picture{
+		z-index: -10;
+	}
+	h1{
+		padding-top: rem(149);
+		line-height: 70px;
+		text-align: center;
+		@include media-breakpoint-up(lg){
+			text-align: left;
+		}
+	}
+	&__caption{
+		font-size: $large;
+		line-height: 28px;
+		font-weight: 300;
+		max-width: 61.6%;
+		padding-top: rem(32);
+		@include media-breakpoint-down(lg){
+			max-width: none;
+			text-align: center;
+			font-weight: 400;
+		}
+	}
+	&__btn-wrap{
+		padding-top: rem(55);
+		display: flex;
+		justify-content: space-between;
+		@include media-breakpoint-down(lg){
+			justify-content: center;
+		}
+	}
+	&__btn-1{
+		z-index: 10;
+		position: relative;
+		@extend .btn, .btn-info;
+		width: rem(270);
+		@include media-breakpoint-down(xxl){
+			width: rem(310);
+		}
+		@include media-breakpoint-down(xl){
+			width: rem(250);
+		}
+		@include media-breakpoint-down(lg){
+			margin-right: rem(15);
+		}
+	}
+	&__btn-2{
+		z-index: 10;
+		position: relative;
+		@extend .btn;
+		width: rem(270);
+		@include media-breakpoint-down(xxl){
+			width: rem(310);
+		}
+		@include media-breakpoint-down(xl){
+			width: rem(250);
+		}
+		@include media-breakpoint-down(lg){
+			margin-left: rem(15);
+		}
+	}
+	&__sale{
+		position: absolute;
+		top: rem(297);
+		left: rem(417);
+		z-index: -1;
+		picture{
+			width: rem(171);
+			height: rem(172);
+		}
+	}
+	.picture-bg{
+		@include media-breakpoint-down(lg){
+			opacity: 0.4;
+		}
+	}
 	@include media-breakpoint-up(md) {}
 
 	@include media-breakpoint-up(sm) {}
