@@ -47,8 +47,13 @@
 	}
 	&--tariff{
 		--sPB:#{rem(136)};
+		--sPT:#{rem(98)};
 		.section-title{
 			padding-bottom: rem(43);
+			text-align: center;
+			@include media-breakpoint-up(lg){
+				text-align: left;
+			}
 		}
 		.h5{
 			padding-top: rem(3) !important;

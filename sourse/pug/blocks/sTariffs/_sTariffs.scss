@@ -151,8 +151,18 @@
 } // end.sTariffs
 .tariffs-page .sTariffs{
 	background-color: $light;
+	--sPT:#{rem(110)};
+	--sTPB:#{rem(33)};
+	&__btn-wrap{
+		padding-top: rem(44);
+	}
+	&__card{
+		background-color: #fff;
+	}
 	h2{
-		text-align: left;
+		@include media-breakpoint-up(lg){
+			text-align: left;
+		}
 		font-size: $h1-font-size;
 	}
 }
