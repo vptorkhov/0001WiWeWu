@@ -4,6 +4,9 @@
 	background-color: $light;
 	// --sPT: #{rem(70)};
 	// --sPB: #{rem(70)}
+	@include media-breakpoint-down(sm) {
+		--sPT: #{rem(65)};
+	}
 	@include media-breakpoint-up(sm) {
 		--sTPB: #{rem(30)};
 	}

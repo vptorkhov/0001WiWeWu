@@ -33,7 +33,7 @@ mixin sContact()
 						.row
 							mixin item(i)
 								.col-4
-									+e.img-wrap
+									+e.img-wrap(href=`img/@2x/contacts-${i}.jpg` data-fslightbox="contacts-gallery")
 										+pic(`contacts-${i}.jpg`,'bg',0)
 							+item(1)
 							+item(2)
