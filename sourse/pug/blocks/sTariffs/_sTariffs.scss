@@ -77,6 +77,9 @@
 				@include media-breakpoint-down(md) {
 					padding-left: rem(50);
 				}
+				@include media-breakpoint-down(sm){
+					padding-left: rem(30);
+				}
 				color: $secondary;
 				line-height: 24px;
 				max-width: rem(300);
@@ -96,6 +99,10 @@
 						left: rem(30);
 						top: rem(8);
 					}
+					@include media-breakpoint-down(sm) {
+						left: rem(13);
+					}
+					
 				}
 			}
 		}
