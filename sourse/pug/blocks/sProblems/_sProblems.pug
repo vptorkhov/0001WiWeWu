@@ -21,7 +21,7 @@ mixin sProblems()
 				mixin item(i,t)
 					.col-12.col-md-6.col-lg-3.col-problem
 						+e.item
-							+e.IMG.icon(src=`img/svg/problems-${i}.svg`)
+							+e.IMG.icon(src=`img/svg/problems-${i}.svg` alt="")
 							+e.item-caption!=t
 				+item(1,`Оплата покупок через наш счет в&nbsp;Германии;`)
 				+item(2,`Проверка качества товаров перед отправкой;`)

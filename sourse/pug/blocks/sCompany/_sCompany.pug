@@ -1,8 +1,7 @@
 mixin sCompany(data)
 	// start sCompany
 	+b.SECTION.sCompany.section.bg-wrap#sCompany&attributes(attributes)
-		+e.bg
-			+pic('04company-bg-1.png','bg',0).picture-bg.d-none.d-xl-block
+		+pic('04company-bg-1.png','bg',0).picture-bg.d-none.d-xl-block
 		.container
 			.row
 				.col-xl-5.col-12
@@ -24,10 +23,21 @@ mixin sCompany(data)
 
 mixin sCompanyAdv(data)
 	// start sCompanyAdv
-	+b.SECTION.sCompanyAdv.section#sCompanyAdv&attributes(attributes)
+	+b.SECTION.sCompanyAdv.section.bg-wrap#sCompanyAdv&attributes(attributes)
+		+pic('04company-bg-2.png','bg',0).picture-bg.d-none.d-xl-block
 		.container
-			+b.section-title.text-center
-				h2 sCompanyAdv
-				
 			.row
+				.col-xl-6.d-none.d-xl-block
+				.col-xl-6.col-12
+					h2 Преимущества
+					+e.adv
+						mixin adv-item(s,c)
+							+e.adv-item
+								img(src=`img/svg/company-${s}.svg`,alt="")
+								+e.caption!=c
+						+adv-item(1,`Уменьшение веса&nbsp;&mdash; мы&nbsp;убираем ненужную упаковку, собираем все покупки, утилизируем рекламные буклеты и&nbsp;коробки из-под обуви.`)
+						+adv-item(2,`Удобная оплата&nbsp;&mdash; Вы&nbsp;можете внести оплату через (способы оплаты). а&nbsp;так&nbsp;же имеется возможность оплаты при получении.`)
+						+adv-item(3,`Низкая стоимость доставки&nbsp;&mdash; благодаря уменьшению веса покупки и&nbsp;нашему опыту в&nbsp;логистике доставка обойдется в&nbsp;несколько раз дешевле.`)
+						+adv-item(4,`Купоны и&nbsp;скидки&nbsp;&mdash; у&nbsp;нас действует система гибких скидок и&nbsp;проводятся акции. Экономьте с&nbsp;нами!`)
+						+adv-item(5,`Мы&nbsp;единственные, кто может предложить недорогую доставку если посылка не&nbsp;превышает по&nbsp;весу 2&nbsp;кг.&nbsp;0,5&nbsp;кг&nbsp;&mdash; 7,5&nbsp;евро, 1&nbsp;кг&mdash;&nbsp;12&nbsp;евро.`)
 	// end sCompanyAdv

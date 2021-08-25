@@ -28,13 +28,13 @@ mixin sAdvantages-tariff()
 
 mixin adv-item(i,t,c)
 	.col-6.col-lg-3
-		+e.IMG.icon(src=`img/svg/advantages-${i}.svg`)
+		+e.IMG.icon(src=`img/svg/advantages-${i}.svg` alt="")
 		.h5!=t
 		+e.caption!=c
 
 mixin adv-item2(i,t,c,s)
 	.col-6.col-lg-3
-		+e.IMG.icon(src=`img/svg/tariffs-page-${i}.svg`)
+		+e.IMG.icon(src=`img/svg/tariffs-page-${i}.svg` alt="")
 		+spec(s)
 		.h5!=t
 		+e.caption!=c
