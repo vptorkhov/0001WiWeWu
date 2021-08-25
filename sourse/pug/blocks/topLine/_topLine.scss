@@ -2,8 +2,8 @@
 .topLine {
 	z-index: 2;
 	position: relative;
-	background-color: white;
 	@include media-breakpoint-up(lg) {
+		background-color: white;
 		--sPT: #{rem(34)};
 		--sPB: #{rem(35)};
 	}

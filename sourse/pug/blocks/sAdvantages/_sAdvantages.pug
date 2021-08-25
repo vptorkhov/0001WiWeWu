@@ -5,11 +5,6 @@ mixin sAdvantages()
 			+b.section-title.text-center
 				h2 Почему с&nbsp;нами выгодно?
 			.row
-				mixin adv-item(i,t,c)
-					.col-6.col-lg-3
-						+e.IMG.icon(src=`img/svg/advantages-${i}.svg`)
-						.h5!=t
-						+e.caption!=c
 				+adv-item(1,`Комиссия&nbsp;0%`,`Стоимость товаров в&nbsp;РФ значительно выше из-за пошлин на&nbsp;импорт. Покупая товары в&nbsp;Германии, вы&nbsp;экономите свои средства`)
 				+adv-item(2,`Выгодные тарифы`,`У&nbsp;нас есть специальные предложения по&nbsp;доставке. Вы&nbsp;можете заказывать товары индивидуально или организовывать совместные покупки`)
 				+adv-item(3,`Заботы оставьте нам`,`Мы&nbsp;берем на&nbsp;себя все нюансы по&nbsp;хранению, проверке качества, транспортировке (и&nbsp;возврату) товаров`)
@@ -18,3 +13,28 @@ mixin sAdvantages()
 				+e.btn(href="#") Смотреть все преимущества
 					span
 	// end sAdvantages
+
+mixin sAdvantages-tariff()
+	// start sAdvantages
+	+b.SECTION.sAdvantages.--tariff.section#sAdvantages&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Услуги
+			.row
+				+adv-item2(1,`Выкуп`,`Стоимость товаров в&nbsp;РФ значительно выше из-за пошлин на&nbsp;импорт. Покупая товары в&nbsp;Германии, вы&nbsp;экономите свои средства`,`бесплатно`)
+				+adv-item2(2,`Общение с&nbsp;продавцами`,`У&nbsp;нас есть специальные предложения по&nbsp;доставке. Вы&nbsp;можете заказывать товары индивидуально или организовывать совместные покупки`,`бесплатно`)
+				+adv-item2(3,`Прием на&nbsp;наш склад`,`Мы&nbsp;берем на&nbsp;себя все нюансы по&nbsp;хранению, проверке качества, транспортировке (и&nbsp;возврату) товаров`,`бесплатно`)
+				+adv-item2(4,`Что-то платное`,`Как только Ваш заказ поступает к&nbsp;нам на&nbsp;склад, мы&nbsp;сразу организовываем доставку прямо Вам в&nbsp;руки`,`$3.5&nbsp;&mdash; $10`)
+
+mixin adv-item(i,t,c)
+	.col-6.col-lg-3
+		+e.IMG.icon(src=`img/svg/advantages-${i}.svg`)
+		.h5!=t
+		+e.caption!=c
+
+mixin adv-item2(i,t,c,s)
+	.col-6.col-lg-3
+		+e.IMG.icon(src=`img/svg/tariffs-page-${i}.svg`)
+		+spec(s)
+		.h5!=t
+		+e.caption!=c
