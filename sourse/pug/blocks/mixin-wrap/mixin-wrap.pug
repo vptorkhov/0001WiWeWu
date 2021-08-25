@@ -26,3 +26,21 @@ mixin ie11()
 mixin spec(t)
 	p.spec
 		span!=t
+
+mixin content-item(t)
+	.row
+		- for (var x = 0; x < 8; x++)
+			.col-sm-6.col-lg-3.col-content
+				a(href="#")
+					.content-item
+						+pic('popular-1.png','',0)
+						.h5!=t
+						p Широкий выбор товаров для дома и&nbsp;семьи. Спортивная одежда и&nbsp;аксессуары, одежда и&nbsp;обувь для взрослых и&nbsp;детей, нижнее белье, инструменты для творчества.
+						.detail(href="#") подробнее
+
+mixin shop-item(i)
+	+b.shop-item
+		+pic(`shop-item-${i}.png`,'bg',0)
+		+e.wrap
+			+e.name Fadjo Юбка
+			+e.to-shop(href='#') в магазин

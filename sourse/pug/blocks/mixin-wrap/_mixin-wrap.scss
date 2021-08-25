@@ -115,3 +115,82 @@
 		border-radius: $border-radius;
 	}
 }
+
+
+
+.col-content{
+	height: auto;
+}
+.content-item {
+	background-color: white;
+	box-shadow: 0 7px $small 3px rgba(202, 207, 221, 0.08);
+	border-radius: $border-radius;
+	padding-bottom: rem(31);
+	height: 100%;
+	picture {
+		padding-top: rem(15);
+		width: rem(182);
+		margin-left: auto;
+		margin-right: auto;
+		@include media-breakpoint-down(sm){
+			display: flex;
+			justify-content: center;
+		}
+	}
+	.h5 {
+		padding-top: rem(12);
+		text-align: center;
+		line-height: 24px;
+		color: $body-color !important;
+	}
+	p {
+		max-width: 75%;
+		margin-left: auto;
+		margin-right: auto;
+		color: $secondary;
+		line-height: 24px;
+		text-align: justify;
+	}
+	.detail {
+		width: 75%;
+		margin-left: auto;
+		margin-right: auto;
+		color: $success;
+		font-size: 11px;
+		line-height: 21px;
+		text-transform: uppercase;
+		letter-spacing: 0.73px;
+		font-weight: 500;
+	}
+}
+
+.shop-item{
+	min-height: 100%;
+	picture{
+		// border-radius: $border-radius;
+		min-height: 89.1%;
+		max-height: 89.1%;
+		background-color: $secondary;
+		border-radius: $border-radius;
+		img{
+			height: rem(305.6);
+			border-radius: rem(8);
+		}
+	}
+	&__wrap{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-left: rem(22);
+		padding-right: rem(22);
+		padding-top: rem(17);
+	}
+	&__to-shop{
+		font-size: rem(11);
+		text-transform: uppercase;
+		font-weight: 500;
+		color: $success;
+		letter-spacing: 0.73px;
+		line-height: 21px;
+	}
+}

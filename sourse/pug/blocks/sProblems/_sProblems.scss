@@ -26,6 +26,9 @@
 		@include media-breakpoint-up(xl) {
 			text-align: left;
 		}
+		@include media-breakpoint-down(sm){
+			text-align: justify;
+		}
 	}
 	ul {
 		padding-top: rem(15);

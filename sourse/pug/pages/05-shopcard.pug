@@ -1,0 +1,22 @@
+extends layout/main.pug
+
+
+include ../blocks/sShopcard/_sShopcard.pug
+
+block variables
+	- let  mainPage= null
+	- let  bg= '05-shopcard.jpg'
+block title
+	- let  title= 'Карточка магазина'
+	title= title
+block pagecontent 
+	//- +mob-mnu()
+	+header()
+		+top-nav()
+		+topLine()
+	.container(style="position: relative; z-index: 4;")
+		+breadcrumb(`Главная`, title, `Zara`)
+	+sShopcard().top-section
+	+sShopPopular()
+	+sShopSimilar()
+	+footer()

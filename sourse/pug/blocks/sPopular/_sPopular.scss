@@ -40,50 +40,7 @@
 			}
 		}
 	}
-	.col-content{
-		height: auto;
-	}
-	.content-item {
-		background-color: white;
-		box-shadow: 0 7px $small 3px rgba(202, 207, 221, 0.08);
-		border-radius: $border-radius;
-		padding-bottom: rem(31);
-		height: 100%;
-		picture {
-			padding-top: rem(15);
-			width: rem(182);
-			margin-left: auto;
-			margin-right: auto;
-			@include media-breakpoint-down(sm){
-				display: flex;
-				justify-content: center;
-			}
-		}
-		.h5 {
-			padding-top: rem(12);
-			text-align: center;
-			line-height: 24px;
-			color: $body-color !important;
-		}
-		p {
-			max-width: 75%;
-			margin-left: auto;
-			margin-right: auto;
-			color: $secondary;
-			line-height: 24px;
-		}
-		.detail {
-			width: 75%;
-			margin-left: auto;
-			margin-right: auto;
-			color: $success;
-			font-size: 11px;
-			line-height: 21px;
-			text-transform: uppercase;
-			letter-spacing: 0.73px;
-			font-weight: 500;
-		}
-	}
+
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
