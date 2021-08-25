@@ -21,6 +21,9 @@
 			text-align: left;
 			width: 97%;
 		}
+		@include media-breakpoint-down(sm){
+			text-align: justify;
+		}
 	}
 	.picture-bg{
 		max-width: rem(1100);

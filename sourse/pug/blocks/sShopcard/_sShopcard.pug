@@ -1,0 +1,31 @@
+mixin sShopcard(data)
+	// start sShopcard
+	+b.SECTION.sShopcard.section#sShopcard&attributes(attributes)
+		.container
+			.row
+				.col-lg-6.col-12
+					h2 Zara
+					+e.category
+						+spec('Одежда')
+						+spec('Обувь')
+						+spec('Аксессуары')
+					+e.title Комиссия&nbsp;0%, совместные покупки, Доставка от&nbsp;1&euro;
+					+e.caption Zara&nbsp;&mdash; Зара интернет магазин всемирно известная ведущая торговая сеть, предлагающая коллекции мужской, женской и&nbsp;детской одежды. Особенностью ЗАРА официальный сайт является постоянно обновляющийся ассортимент. Ни&nbsp;одна модель не&nbsp;задерживается в&nbsp;магазине более 4&nbsp;месяцев. Помимо одежды вы&nbsp;найдете последние тенденции в&nbsp;домашнем текстиле и&nbsp;предметах декора от&nbsp;Zara Home. Постельное белье, посуда, полотенца и&nbsp;аксессуары высшего качества. В&nbsp;этом магазине наша комиссия&nbsp;0%.
+				.col-lg-6.d-none.d-lg-block.pic-shop
+					+pic('shopcard-1.png','',0)
+	// end sShopcard
+
+mixin sShopPopular(data)
+	+b.SECTION.sShopPopular.section#sShopPopular&attributes(attributes)
+		.container
+			+e.title Популярные товары
+			.row
+				-for (var x=1;x<9;x++)
+					.col-6.col-lg-3.col-md-4
+						+shop-item(x)
+
+mixin sShopSimilar(data)
+	+b.SECTION.sShopSimilar.section#sShopSimilar&attributes(attributes)
+		.container
+			+e.title Похожие магазины
+			+content-item(`Tchibo`)
