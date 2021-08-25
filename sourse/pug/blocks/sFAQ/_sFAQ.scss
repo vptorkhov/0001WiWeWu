@@ -41,6 +41,10 @@
 				line-height: rem(46);
 				font-weight: 500;
 				position: relative;
+				@include media-breakpoint-down(sm){
+					padding-right: rem(10);
+					line-height: rem(40);
+				}
 				&.active{
 					color: $success;
 					&::after{
