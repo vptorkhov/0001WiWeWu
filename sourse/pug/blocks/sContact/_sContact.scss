@@ -1,9 +1,31 @@
 
 	// start .sContact
 	.sContact {
+		--sTPB: #{rem(60)};
+		padding-top: calc(var(--sPT) + #{rem(36)});
 		background-color: $light;
+		
+		&__map {
+			border-radius: $border-radius;
+			overflow: hidden;
+		}
 		&__img-wrap {
-			@include block(212, 136)
+			@include block(212, 136);
+			border-radius: $border-radius;
+			overflow: hidden;
+			img {
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			
+		}
+		&__gallery {
+			padding-top: rem(16);
+			.row {
+				--bs-gutter-x: #{rem(16)};
+				--bs-gutter-y: var(--bs-gutter-x);
+			}
 		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
