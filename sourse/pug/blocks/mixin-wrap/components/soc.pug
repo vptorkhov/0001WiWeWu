@@ -26,3 +26,16 @@ mixin soc-footer()
 		+item('instagram-footer')
 		+item('google-footer')
 		+item('twitter-footer')
+
+mixin soc-questions()
+	+b.soc--questions
+		mixin item(icon, a='#')
+			+e.A.item(href= a target="_blank")
+				if block
+					block
+				else
+					+icon(icon)
+		+item('telegram-q')
+		+item('phone-call-q')
+		+item('watsapp-q')
+		+item('phone-q')

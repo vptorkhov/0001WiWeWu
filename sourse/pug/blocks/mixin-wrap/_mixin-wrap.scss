@@ -45,9 +45,43 @@
 				}
 			}
 			&:hover {
-				opacity: .7;
+				opacity: 0.7;
 				.icon {
 					color: $white;
+				}
+			}
+		}
+	}
+	&--questions {
+		margin: 0;
+		.soc__item {
+			position: relative;
+			width: rem(47);
+			height: rem(47);
+			border-radius: 50%;
+			background-color: $white;
+			margin: 0 rem(7px);
+			box-shadow: 0 7px 13px 3px rgba(202, 207, 221, 0.2);
+			.icon {
+				@include mt;
+				@include a-cent;
+				color: #e0e0e0;
+				&-telegram-q {
+					font-size: rem(18);
+				}
+				&-phone-call-q {
+					font-size: rem(19);
+				}
+				&-watsapp-q {
+					font-size: rem(20);
+				}
+				&-phone-q {
+					font-size: rem(16);
+				}
+			}
+			&:hover {
+				.icon {
+					color: $success;
 				}
 			}
 		}
@@ -65,9 +99,9 @@
 	}
 }
 
-.spec{
+.spec {
 	padding-top: 30px;
-	span{
+	span {
 		background-color: rgba(125, 158, 100, 0.1);
 		color: $success;
 		font-size: 11px;

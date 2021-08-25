@@ -13,8 +13,15 @@
 	@include media-breakpoint-up(lg) {
 		--sTPB: #{rem(48)};
 		--sPT: #{rem(100)};
-		--sPB: #{rem(100)};
+		--sPB: #{rem(110)};
 	}
+
+	.section-title {
+		h1 {
+			font-size: $h2-font-size;
+		}
+	}
+
 	table {
 		width: 100%;
 		margin-bottom: rem(20);
