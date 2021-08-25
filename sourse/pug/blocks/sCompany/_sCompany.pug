@@ -1,0 +1,43 @@
+mixin sCompany(data)
+	// start sCompany
+	+b.SECTION.sCompany.section.bg-wrap#sCompany&attributes(attributes)
+		+pic('04company-bg-1.png','bg',0).picture-bg.d-none.d-xl-block
+		.container
+			.row
+				.col-xl-5.col-12
+					h1 О&nbsp;компании
+					+e.caption Мы&nbsp;помогаем делать Вам онлайн-покупки различных товаров в&nbsp;Европе. Предлагаем сервис по&nbsp;выкупу различных товаров для клиентов в&nbsp;интернет-магазинах Европы (в&nbsp;частности Германии) за&nbsp;комиссию или чаще всего без комиссии и&nbsp;пересылаем или доставляем покупки в&nbsp;Россию, страны СНГ и&nbsp;другие страны (по запросу клиентов).
+					+e.info
+						mixin info-item(t,c)
+							+e.info-item
+								.title!= t
+								.info-cap!=c
+						.row
+							+info-item(`5&nbsp;лет`,`на&nbsp;рынке`)
+							+info-item(`15к+`,`постоянных клиентов`)
+						.row
+							+info-item(`1000`,`заказов еженедельно`)
+							+info-item(`150`,`онлайн-магазинов`)
+
+	// end sCompany
+
+mixin sCompanyAdv(data)
+	// start sCompanyAdv
+	+b.SECTION.sCompanyAdv.section.bg-wrap#sCompanyAdv&attributes(attributes)
+		+pic('04company-bg-2.png','bg',0).picture-bg.d-none.d-xl-block
+		.container
+			.row
+				.col-xl-6.d-none.d-xl-block
+				.col-xl-6.col-12
+					h2 Преимущества
+					+e.adv
+						mixin adv-item(s,c)
+							+e.adv-item
+								img(src=`img/svg/company-${s}.svg`,alt="")
+								+e.caption!=c
+						+adv-item(1,`Уменьшение веса&nbsp;&mdash; мы&nbsp;убираем ненужную упаковку, собираем все покупки, утилизируем рекламные буклеты и&nbsp;коробки из-под обуви.`)
+						+adv-item(2,`Удобная оплата&nbsp;&mdash; Вы&nbsp;можете внести оплату через (способы оплаты). а&nbsp;так&nbsp;же имеется возможность оплаты при получении.`)
+						+adv-item(3,`Низкая стоимость доставки&nbsp;&mdash; благодаря уменьшению веса покупки и&nbsp;нашему опыту в&nbsp;логистике доставка обойдется в&nbsp;несколько раз дешевле.`)
+						+adv-item(4,`Купоны и&nbsp;скидки&nbsp;&mdash; у&nbsp;нас действует система гибких скидок и&nbsp;проводятся акции. Экономьте с&nbsp;нами!`)
+						+adv-item(5,`Мы&nbsp;единственные, кто может предложить недорогую доставку если посылка не&nbsp;превышает по&nbsp;весу 2&nbsp;кг.&nbsp;0,5&nbsp;кг&nbsp;&mdash; 7,5&nbsp;евро, 1&nbsp;кг&mdash;&nbsp;12&nbsp;евро.`)
+	// end sCompanyAdv

@@ -1,0 +1,113 @@
+// start .sCompany
+.sCompany {
+	--sPT:#{rem(98)};
+	--sPB:#{rem(107)};
+	position: relative;
+	background-color: $light;
+	h1{
+		line-height: 70.02px;
+		text-align: center;
+		@include media-breakpoint-up(xl){
+			text-align: left;
+		}
+	}
+	&__caption{
+		padding-top: rem(19);
+		font-size: $large;
+		line-height: 28.01px;
+		font-weight: 300;
+		text-align: center;
+		@include media-breakpoint-up(xl){
+			text-align: left;
+			width: 97%;
+		}
+	}
+	.picture-bg{
+		max-width: rem(1100);
+		left: auto;
+		right: 0;
+	}
+	&__info{
+		@include media-breakpoint-up(xl){
+			width: 78%;
+		}
+		padding-top: rem(31);
+		.row{
+			&:first-child{
+				margin-bottom: rem(14);
+			}
+		}
+		&-item{
+			width: 50%;
+			.title{
+				color: $success;
+				font-family: Montserrat;
+				font-weight: 300;
+				font-size: 48px;
+				line-height: 70.02px;
+				text-align: center;
+				@include media-breakpoint-up(xl){
+					text-align: left;
+				}
+			}
+			.info-cap{
+				margin-top: rem(-6);
+				color: $secondary;
+				line-height: 24.01px;
+				text-align: center;
+				@include media-breakpoint-up(xl){
+					text-align: left;
+				}
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sCompany
+
+
+.sCompanyAdv {
+	--sPT:#{rem(90)};
+	--sPB:#{rem(79)};
+	.picture-bg{
+		max-width: 49%;
+		top: auto;
+		bottom: 0;
+		object-fit: contain;
+		img{
+			top: auto;
+			bottom: 0;
+			object-fit: fill;
+		}
+	}
+	h2{
+		line-height: 70.02px;
+		text-align: center;
+		@include media-breakpoint-up(xl){
+			text-align: left;
+		}
+	}
+	&__adv{
+		padding-top: rem(20);
+		&-item{
+			display: flex;
+			margin-bottom: rem(27);
+			img{
+				margin-top: rem(8);
+				width: rem(27);
+				height: rem(27);
+				margin-right: rem(38);
+			}
+		}
+	}
+	&__caption{
+		font-size: $large;
+		font-weight: 300;
+		line-height: 28.01px;
+	}
+}
