@@ -37,9 +37,9 @@
 		margin-bottom: 0;
 
 		&--first {
-			@include media-breakpoint-down(sm) {
-				padding-left: rem(10);
-			}
+			// @include media-breakpoint-down(sm) {
+			// 	padding-left: rem(10);
+			// }
 			@include media-breakpoint-up(xl) {
 				min-width: rem(152);
 			}
@@ -50,9 +50,9 @@
 			}
 		}
 		&--third {
-			@include media-breakpoint-down(sm) {
-				padding-left: rem(10);
-			}
+			// @include media-breakpoint-down(sm) {
+			// 	padding-left: rem(10);
+			// }
 			@include media-breakpoint-up(xl) {
 				min-width: rem(170);
 			}

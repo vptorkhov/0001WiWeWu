@@ -1,54 +1,142 @@
-
-	// start .sContact
-	.sContact {
-		--sTPB: #{rem(60)};
-		padding-top: calc(var(--sPT) + #{rem(36)});
-		background-color: $light;
-		
-		&__map {
-			border-radius: $border-radius;
-			overflow: hidden;
+// start .sContact
+.sContact {
+	--sTPB: #{rem(20)};
+	background-color: $light;
+	// --sPT: #{rem(70)};
+	// --sPB: #{rem(70)}
+	@include media-breakpoint-up(sm) {
+		--sTPB: #{rem(30)};
+	}
+	@include media-breakpoint-up(lg) {
+		--sTPB: #{rem(48)};
+		--sPT: #{rem(100)};
+		--sPB: #{rem(100)};
+	}
+	table {
+		width: 100%;
+		margin-bottom: rem(20);
+		@include media-breakpoint-up(sm) {
+			margin-bottom: rem(30);
 		}
-		&__img-wrap {
-			@include block(212, 136);
-			border-radius: $border-radius;
-			overflow: hidden;
-			img {
-				position: absolute;
-				left: 0;
-				top: 0;
+		@include media-breakpoint-up(lg) {
+			padding-bottom: 0;
+		}
+		td {
+			vertical-align: top;
+			padding-bottom: rem(20);
+			a,
+			span {
+				display: block;
 			}
-			
+			a[href^="tel"] {
+				line-height: 1;
+				font-size: rem(24);
+				color: $body-color;
+				font-weight: 700;
+				&:hover {
+					color: $link-hover-color;
+				}
+			}
+			a[href^="mailto"] {
+				color: $body-color;
+				font-size: $large;
+				font-weight: 300;
+				line-height: calc(28 / 17);
+				&:hover {
+					color: $link-hover-color;
+				}
+			}
+			span {
+				color: $body-color;
+				font-size: $large;
+				font-weight: 300;
+				line-height: calc(28 / 17);
+			}
 		}
-		&__gallery {
-			padding-top: rem(16);
-			.row {
+		th {
+			vertical-align: top;
+			white-space: nowrap;
+			padding-right: rem(14);
+			color: $secondary;
+			font-size: rem(14);
+			font-weight: 400;
+			padding-top: rem(3);
+		}
+		small {
+			color: $secondary;
+			font-size: rem(14);
+			line-height: calc(24 / 14);
+			font-weight: 400;
+		}
+		tr {
+			&:last-child {
+				td {
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+	&__map {
+		border-radius: $border-radius;
+		overflow: hidden;
+		height: rem(330);
+	}
+	&__img-wrap {
+		@include block(212, 136);
+		border-radius: $border-radius;
+		overflow: hidden;
+		img {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+	&__gallery {
+		padding-top: rem(16);
+		.row {
+			--bs-gutter-y: var(--bs-gutter-x);
+			--bs-gutter-x: #{rem(10)};
+			@include media-breakpoint-up(sm) {
 				--bs-gutter-x: #{rem(16)};
-				--bs-gutter-y: var(--bs-gutter-x);
 			}
 		}
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-up(xs) {}
-	
-	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
-	//
-	@include media-breakpoint-only(xs) {}
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
-	@include media-breakpoint-only(xl) {}
-	
-	//
-	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-up(xs) {
+	}
 
+	//
+	@include media-breakpoint-between(md, xl) {
+	}
+
+	//
+	@include media-breakpoint-only(xs) {
+	}
+	@include media-breakpoint-only(sm) {
+	}
+	@include media-breakpoint-only(md) {
+	}
+	@include media-breakpoint-only(lg) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+
+	//
+	@include media-breakpoint-down(xl) {
+	}
+	@include media-breakpoint-down(lg) {
+	}
+	@include media-breakpoint-down(md) {
+	}
+	@include media-breakpoint-down(sm) {
+	}
+	@include media-breakpoint-down(xs) {
+	}
 } // end.sContact
