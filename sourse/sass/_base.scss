@@ -9,7 +9,7 @@
 	height: 100%;
 	background-position: center 0;
 	opacity: 0;
-	//opacity: 0.7;
+	// opacity: 0.7;
 } 
 
 body,
@@ -540,10 +540,14 @@ h1, h2 ,h5{
 	border: 2px solid $primary;
 }
 
-.tariff-container{
-	padding-top: rem(18);
-}
+// .tariff-container{
+// 	padding-top: rem(18);
+// }
 
-.tariffs-page .breadcrumb{
-	margin-bottom: rem(-46);
+// .tariffs-page .breadcrumb{
+// 	margin-bottom: rem(-46);
+// }
+
+.top-section {
+	margin-top: rem(-36);
 }

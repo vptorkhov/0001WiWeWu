@@ -2,8 +2,20 @@ mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
 			.row
+				.col-5
+					+b.section-title.text-center
+						h2 Контакты
+				.col-7
+					.map
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1164.3472071349572!2d10.22550064132156!3d54.291670651273755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b259db92935fd5%3A0x9f2a4af39a0f31ad!2zTGlzZS1NZWl0bmVyLVN0cmHDn2UgMS03LCAyNDIyMyBTY2h3ZW50aW5lbnRhbCwg0JPQtdGA0LzQsNC90LjRjw!5e0!3m2!1sru!2sby!4v1629884778641!5m2!1sru!2sby" width="100%" height="330" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+					.row
+						mixin item(i)
+							.col-4
+								+e.img-wrap
+									+pic(`reviews-${i}.jpg`,'bg',0).picture-bg
+						+item(1)
+						+item(2)
+						+item(3)
+
 	// end sContact

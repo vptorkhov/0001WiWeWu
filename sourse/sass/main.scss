@@ -68,10 +68,13 @@ $output-bourbon-deprecation-warnings: false;
 // scss-docs-end import-stack
 
 .breadcrumb {
+  padding-top: rem(15);
+  margin-bottom: 0;
   a {
-    color: $secondary;
+    font-size: $small;
+    color: $success2;
     &:hover {
-      color: $body-color;
+      color: $secondary;
     }
   }
   .active {
@@ -81,6 +84,7 @@ $output-bourbon-deprecation-warnings: false;
     }
   }
 }
+
 // @import "./node_modules/bootstrap/scss/pagination";
 
 // .pagination-wrapper ul {

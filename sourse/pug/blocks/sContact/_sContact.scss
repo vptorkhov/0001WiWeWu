@@ -1,7 +1,10 @@
 
 	// start .sContact
 	.sContact {
-		 
+		background-color: $light;
+		&__img-wrap {
+			@include block(212, 136)
+		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
