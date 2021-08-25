@@ -489,6 +489,7 @@ iframe {
 
 h1, h2 ,h5{
 	font-family: Montserrat;
+	font-weight: 700;
 }
 
 .container{
@@ -550,4 +551,7 @@ h1, h2 ,h5{
 
 .top-section {
 	margin-top: rem(-36);
+	@include media-breakpoint-between(sm,lg){
+		margin-top: rem(-28);
+	}
 }

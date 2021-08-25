@@ -1,0 +1,33 @@
+mixin sCompany(data)
+	// start sCompany
+	+b.SECTION.sCompany.section.bg-wrap#sCompany&attributes(attributes)
+		+e.bg
+			+pic('04company-bg-1.png','bg',0).picture-bg.d-none.d-xl-block
+		.container
+			.row
+				.col-xl-5.col-12
+					h1 О&nbsp;компании
+					+e.caption Мы&nbsp;помогаем делать Вам онлайн-покупки различных товаров в&nbsp;Европе. Предлагаем сервис по&nbsp;выкупу различных товаров для клиентов в&nbsp;интернет-магазинах Европы (в&nbsp;частности Германии) за&nbsp;комиссию или чаще всего без комиссии и&nbsp;пересылаем или доставляем покупки в&nbsp;Россию, страны СНГ и&nbsp;другие страны (по запросу клиентов).
+					+e.info
+						mixin info-item(t,c)
+							+e.info-item
+								.title!= t
+								.info-cap!=c
+						.row
+							+info-item(`5&nbsp;лет`,`на&nbsp;рынке`)
+							+info-item(`15к+`,`постоянных клиентов`)
+						.row
+							+info-item(`1000`,`заказов еженедельно`)
+							+info-item(`150`,`онлайн-магазинов`)
+
+	// end sCompany
+
+mixin sCompanyAdv(data)
+	// start sCompanyAdv
+	+b.SECTION.sCompanyAdv.section#sCompanyAdv&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 sCompanyAdv
+				
+			.row
+	// end sCompanyAdv
