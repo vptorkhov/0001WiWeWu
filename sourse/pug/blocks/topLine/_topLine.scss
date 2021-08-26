@@ -8,10 +8,10 @@
 		--sPB: #{rem(35)};
 	}
 	--sPT: #{rem(20)};
-	--sPB: #{rem(0)};
+	--sPB: #{rem(10)};
 	@include media-breakpoint-down(sm) {
 		--sPT: #{rem(12)};
-		--sPB: #{rem(35)};
+		--sPB: #{rem(17)};
 	}
 	.row {
 		align-items: center;

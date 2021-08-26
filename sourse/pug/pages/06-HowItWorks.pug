@@ -1,0 +1,21 @@
+extends layout/main.pug
+
+
+include ../blocks/sHowItWorks/_sHowItWorks.pug
+
+block variables
+	- let  mainPage= 'hiw-page'
+	- let  bg= '06-HowItWorks.jpg'
+block title
+	- let  title= 'Как это работает'
+	title= title
+block pagecontent 
+	//- +mob-mnu()
+	+header()
+		+top-nav()
+		+topLine()
+	.container(style="position: relative; z-index: 4;")
+		+breadcrumb(`Главная`, title)
+	+sHowItWorks().top-section
+	+sRegistration()
+	+footer()
