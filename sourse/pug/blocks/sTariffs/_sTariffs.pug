@@ -5,17 +5,8 @@ mixin sTariffs(t)
 			+b.section-title
 				h2!=t
 			.row
-				//- mixin tariff-item(i,t, ...items)
-				//- 	.col-8.col-lg-4.col-info
-				//- 		+e.card
-				//- 			+pic(`tariffs-${i}.png`,'',0)
-				//- 			+e.card-info
-				//- 				.h5!=t
-				//- 				ul
-				//- 					each item in items
-				//- 						li!=item
 				mixin tariff-item(i,t, ...items)
-					.col-8.col-lg-4.col-info
+					.col-12.col-lg-4.col-info
 						+e.card.bg-wrap
 							+pic(`tariffs-${i}.png`,'',0)
 							+e.card-info
