@@ -1,0 +1,85 @@
+// start .sHowItWorks
+.sHowItWorks {
+		--sPT: #{rem(91)};
+		--sPB: #{rem(110)};
+		--sTPB:#{rem(50)} ;
+	background-color: $body-color;
+	position: relative;
+	.row{
+		@include media-breakpoint-down(lg){
+			--bs-gutter-y:#{rem(30)};
+		}
+	}
+	.section-title{
+		color:$white;
+		line-height: 70px;
+	}
+	.picture-bg{
+		opacity: 0.1;
+	}
+	.wrap{
+		&:last-child{
+			.sHowItWorks__line{
+				display: none;
+			}
+		}
+	}
+	&__icon-wrap{
+		display: flex;
+		align-items: center;
+	}
+	&__icon{
+		width: rem(30);
+		height: rem(30);
+	}
+	&__line{
+		padding-left: 20px;
+		display: block;
+		@include media-breakpoint-down(xxl){
+			width: 80%;
+		}
+		@include media-breakpoint-down(lg){
+			display: none;
+		}
+	}
+	&__title{
+		color:$white;
+		line-height: 30px;
+		padding-top: rem(33);
+	}
+	&__caption{
+		color: #bbc6b2;
+		line-height: 24px;
+		padding-top: rem(5);
+		span{
+			color:$white;
+			text-decoration: underline;
+			text-decoration-style: dotted;
+		}
+	}
+	&__instruction{
+		position: absolute;
+		bottom: 19.66%;
+		@include media-breakpoint-down(xxl){
+			bottom: 5%;
+		}
+		// left: rem(1611);
+		right: 2.5%;
+		background-image: url(../img/svg/hiw-instruction.svg);
+		background-size: cover;
+		color:$white;
+		line-height: rem(21);
+		font-weight: 500;
+		width: rem(129);
+		height: rem(62);
+		text-align: center;
+		padding-top: rem(13);
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} 

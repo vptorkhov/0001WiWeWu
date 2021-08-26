@@ -68,22 +68,38 @@ $output-bourbon-deprecation-warnings: false;
 // scss-docs-end import-stack
 
 .breadcrumb {
-  padding-top: rem(15);
-  margin-bottom: 0;
-  a {
-    font-size: $small;
-    color: $success2;
-    &:hover {
-      color: $secondary;
-    }
-  }
-  .active {
-    a {
-      color: $breadcrumb-active-color;
-      pointer-events: none;
-    }
-  }
+	padding-top: rem(15);
+	margin-bottom: 0;
+	a {
+		font-size: $small;
+		color: $success2;
+		&:hover {
+			color: $secondary;
+		}
+	}
+	.active {
+		a {
+			color: $breadcrumb-active-color;
+			pointer-events: none;
+		}
+	}
 }
+
+.hiw-page .breadcrumb{
+	a {
+		color: $white;
+		&:hover {
+			color: $secondary;
+		}
+	}
+	.active {
+		a {
+			color: $breadcrumb-active-color;
+			pointer-events: none;
+		}
+	}
+}
+
 
 // @import "./node_modules/bootstrap/scss/pagination";
 

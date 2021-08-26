@@ -1,0 +1,21 @@
+mixin sHowItWorks(data)
+	// start sHowItWorks
+	+b.SECTION.sHowItWorks.section.bg-wrap#sHowItWorks&attributes(attributes)
+		+pic('hiw-bg.jpg','bg',0).picture-bg
+		.container
+			+b.section-title.text-center
+				h2 Как это работает
+			.row
+				mixin item (i,t,c)
+					.col-lg-3.col-6.wrap
+						+e.icon-wrap
+							+e.IMG.icon(src=`img/svg/hiw-${i}.svg` alt="")
+							+e.IMG.line(src=`img/svg/hiw-line.svg` alt="")
+						+e.title.h5!=t
+						+e.caption!=c
+				+item(1,`Регистрация`,`<span>Зарегистрируйтесь</span> на&nbsp;нашем сайте, чтобы получить персональный адрес в&nbsp;Германии или Европе. Создаете аккаунт для управления своими посылками.`)
+				+item(2,`Покупки`,`Выбирайте товары в&nbsp;интернет- магазинах Германии и&nbsp;Европы без посредников.</br>Оформляйте доставку на&nbsp;Ваш персональный адрес в&nbsp;Европе. <span>Зачем?</span>`)
+				+item(3,`Отправка`,`Когда все купленные товары придут на&nbsp;наш склад, вы&nbsp;увидите их&nbsp;в&nbsp;личном кабинете и&nbsp;сможете сформировать отправку посылки домой.`)
+				+item(4,`Получение`,`Создавая отправку, выбирайте самый удобный для вас способ доставки&nbsp;&mdash; в&nbsp;почтовое отделение, до&nbsp;пункта выдачи&nbsp;заказов или курьерской службой&nbsp;прямо домой.`)
+		+e.instruction Инструкция
+	// end sHowItWorks
