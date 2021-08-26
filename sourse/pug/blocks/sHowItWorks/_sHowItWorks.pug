@@ -19,3 +19,16 @@ mixin sHowItWorks(data)
 				+item(4,`Получение`,`Создавая отправку, выбирайте самый удобный для вас способ доставки&nbsp;&mdash; в&nbsp;почтовое отделение, до&nbsp;пункта выдачи&nbsp;заказов или курьерской службой&nbsp;прямо домой.`)
 		+e.instruction Инструкция
 	// end sHowItWorks
+
+mixin sRegistration(data)
+	// start sRegistration
+	+b.SECTION.sRegistration.section.bg-wrap#sRegistration&attributes(attributes)
+		.container
+			.row
+				.col-lg-6.col-12
+					.h2 Регистрация
+					+e.caption1 Зарегистрируйтесь на&nbsp;нашем сайте, чтобы получить персональный адрес в&nbsp;Европе и&nbsp;создать аккаунт для управления своими посылками.
+					+e.caption2 На&nbsp;этот адрес вы&nbsp;сможете делать заказы в&nbsp;зарубежных интернет-магазинах.&nbsp;А&nbsp;в&nbsp;вашем личном кабинете будет храниться вся информация о&nbsp;ваших посылках.
+					+e.necessarily Обязательно указывайте Ваши персональные адреса.
+				.col-lg-6.col-12
+					+pic('hiw-registration.png','',0).pic-reg
