@@ -23,7 +23,7 @@ mixin sHowItWorks(data)
 
 mixin sRegistration(data)
 	// start sRegistration
-	+b.SECTION.sRegistration.section.bg-wrap#sRegistration&attributes(attributes)
+	+b.SECTION.sRegistration.section#sRegistration&attributes(attributes)
 		.container
 			.row
 				.col-lg-6.col-12
@@ -33,3 +33,43 @@ mixin sRegistration(data)
 					+e.necessarily Обязательно указывайте Ваши персональные адреса.
 				.col-lg-6.col-12
 					+pic('hiw-registration.png','',0).pic-reg
+
+mixin sPurchases(data)
+	+b.SECTION.sPurchases.section#sPurchases&attributes(attributes)
+		.container
+			.row
+				.col-lg-6
+					+e.cards-wrap
+						+e.cards
+							+shop-item(9)
+							+shop-item(10)
+						+e.cards--second.d-none.d-lg-block
+							+shop-item(9)
+							+shop-item(11)
+							+shop-item(10)
+
+				.col-lg-6.col-12
+					+e.info
+						h2 Делаем покупки
+						+e.caption Выбирайте товары в&nbsp;интернет-магазинах Европы. Оформляйте доставку на&nbsp;ваш персональный адрес у&nbsp;WiWeWu, оплачивайте покупки в&nbsp;интернет-магазинах и&nbsp;ожидайте, когда посылки прибудут к&nbsp;нам на&nbsp;склад. При оформлении заказа интернет-магазин указывает примерные сроки доставки каждого товара до&nbsp;нашего склада и&nbsp;присылает трекинг-номер для отслеживания.
+						+e.ref
+							+e.ref-title.h5 Новичок
+							+e.ref-caption Если Вы&nbsp;новичок в&nbsp;зарубежных покупках и&nbsp;не хотите разбираться во&nbsp;всех тонкостях, то&nbsp;просто отправьте ссылку на&nbsp;интересующий товар и&nbsp;пополнитеь баланс в&nbsp;личном кабинете &mdash; заказ будет быстро оформлен и&nbsp;выкуплен нашими опытными специалистами.
+						+e.ref
+							+e.ref-title.h5 Важно!
+							+e.ref-caption Важная информация
+
+mixin sShipment(data)
+	+b.SECTION.sShipment.section.bg-wrap#sShipment&attributes(attributes)
+		+pic('shipment-bg.jpg','bg',0).picture-bg.d-none.d-lg-block
+		.container
+			.row
+				.col-12.col-lg-6.col-ship
+					h2 Создаем отправку
+					+e.caption Когда все купленные товары придут на&nbsp;наш склад, вы&nbsp;увидите их&nbsp;в&nbsp;личном кабинете и&nbsp;сможете сформировать отправку посылки домой. Вы&nbsp;можете отправить одну посылку или объединить несколько покупок из&nbsp;разных магазинов в&nbsp;одно отправление.
+					+e.ref
+						+e.ref-title.h5 Вариант доставки
+						+e.ref-caption Вам необходимо заполнить декларацию и&nbsp;выбрать наиболее удобный способ доставки. По&nbsp;запросу объединим посылки из&nbsp;нескольких заказов или рассчитаем стоимость доставки.
+					+e.ref
+						+e.ref-title.h5 Проверить
+						+e.ref-caption Мы&nbsp;также можем проверить полученные вами товары на&nbsp;работоспособность, соответствие заказу или измерить параметры и&nbsp;сделать фото.

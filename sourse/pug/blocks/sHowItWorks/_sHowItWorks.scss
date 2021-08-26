@@ -1,74 +1,74 @@
 // start .sHowItWorks
 .sHowItWorks {
-		--sPT: #{rem(91)};
-		--sPB: #{rem(110)};
-		--sTPB:#{rem(50)} ;
+	--sPT: #{rem(91)};
+	--sPB: #{rem(110)};
+	--sTPB: #{rem(50)};
 	background-color: $body-color;
 	position: relative;
-	.row{
-		@include media-breakpoint-down(lg){
-			--bs-gutter-y:#{rem(30)};
+	.row {
+		@include media-breakpoint-down(lg) {
+			--bs-gutter-y: #{rem(30)};
 		}
 	}
-	.section-title{
-		color:$white;
+	.section-title {
+		color: $white;
 		line-height: 70px;
 	}
-	.picture-bg{
+	.picture-bg {
 		opacity: 0.1;
 	}
-	.wrap{
-		&:last-child{
-			.sHowItWorks__line{
+	.wrap {
+		&:last-child {
+			.sHowItWorks__line {
 				display: none;
 			}
 		}
 	}
-	&__icon-wrap{
+	&__icon-wrap {
 		display: flex;
 		align-items: center;
 	}
-	&__icon{
+	&__icon {
 		width: rem(30);
 		height: rem(30);
 	}
-	&__line{
+	&__line {
 		padding-left: 20px;
 		display: block;
-		@include media-breakpoint-down(xxl){
+		@include media-breakpoint-down(xxl) {
 			width: 80%;
 		}
-		@include media-breakpoint-down(lg){
+		@include media-breakpoint-down(lg) {
 			display: none;
 		}
 	}
-	&__title{
-		color:$white;
+	&__title {
+		color: $white;
 		line-height: 30px;
 		padding-top: rem(33);
 	}
-	&__caption{
+	&__caption {
 		color: #bbc6b2;
 		line-height: 24px;
 		padding-top: rem(5);
-		.hiw-span{
+		.hiw-span {
 			cursor: pointer;
-			color:$white;
+			color: $white;
 			text-decoration: underline;
 			text-decoration-style: dotted;
 		}
 	}
-	&__instruction{
+	&__instruction {
 		position: absolute;
 		bottom: 19.66%;
-		@include media-breakpoint-down(xxl){
+		@include media-breakpoint-down(xxl) {
 			bottom: 5%;
 		}
 		// left: rem(1611);
 		right: 2.5%;
 		background-image: url(../img/svg/hiw-instruction.svg);
 		background-size: cover;
-		color:$white;
+		color: $white;
 		line-height: rem(21);
 		font-weight: 500;
 		width: rem(129);
@@ -76,7 +76,7 @@
 		text-align: center;
 		padding-top: rem(13);
 	}
-	&__hover-info{
+	&__hover-info {
 		position: absolute;
 		display: none;
 		left: 42.1%;
@@ -92,25 +92,35 @@
 		box-shadow: 0 7px $small 3px rgba(202, 207, 221, 0.08);
 		border-radius: $border-radius;
 	}
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
-} 
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+}
 
-.sRegistration{
+.sRegistration {
+	background-color: $white;
+	position: relative;
+	z-index: 2;
 	--sPT: #{rem(91)};
 	--sPB: #{rem(81)};
-	.row{
-		@include media-breakpoint-down(lg){
-			--bs-gutter-y:#{rem(30)};
+	.row {
+		@include media-breakpoint-down(lg) {
+			--bs-gutter-y: #{rem(30)};
 		}
 	}
-	&__caption1{
-		@include media-breakpoint-up(lg){
+	&__caption1 {
+		@include media-breakpoint-up(lg) {
 			width: 98%;
 		}
 		padding-top: rem(22);
@@ -118,8 +128,8 @@
 		font-weight: 300;
 		line-height: rem(28);
 	}
-	&__caption2{
-		@include media-breakpoint-up(lg){
+	&__caption2 {
+		@include media-breakpoint-up(lg) {
 			width: 98%;
 		}
 		padding-top: rem(28);
@@ -127,7 +137,7 @@
 		font-weight: 300;
 		line-height: rem(28);
 	}
-	&__necessarily{
+	&__necessarily {
 		padding-top: rem(28);
 		font-size: $large;
 		font-weight: 300;
@@ -136,10 +146,153 @@
 		text-decoration: underline;
 		text-decoration-style: dotted;
 	}
-	.pic-reg{
-		@include media-breakpoint-up(lg){
+	.pic-reg {
+		@include media-breakpoint-up(lg) {
 			margin-top: rem(-40);
 			margin-left: rem(66);
 		}
+	}
+}
+
+.sPurchases {
+	position: relative;
+	z-index: 1;
+	background-color: $light;
+	--sPT: 0;
+	
+	@include media-breakpoint-up(lg){
+		height: rem(796);
+		max-height: rem(796);
+		--sPB: 0;
+	}
+	&__info{
+		@include media-breakpoint-up(lg){
+			padding-left: rem(74);
+		}
+	}
+	h2{
+		line-height: rem(70);
+		padding-top: rem(79);
+	}
+	&__caption{
+		font-size: $large;
+		font-weight: 300;
+		line-height: rem(28);
+		padding-top: rem(15);
+		@include media-breakpoint-up(lg){
+			padding-left: rem(3);
+		}
+	}
+	&__ref{
+		margin-top: rem(30);
+		margin-bottom: 10px;
+		padding-left: rem(31);
+		padding-right: rem(24);
+		padding-top: rem(19);
+		padding-bottom: rem(19);
+		box-shadow: 0 7px $small 3px rgba(202, 207, 221, 0.08);
+		border-radius: $border-radius;
+		background-color: $white;
+		display: flex;
+		&-title{
+			color: $success;
+			line-height: rem(30);
+			width:rem(90);
+		}
+		&-caption{
+			color: $secondary;
+			line-height: rem(24);
+			padding-top: rem(3);
+			padding-left: rem(36);
+		}
+	}
+	&__cards-wrap{
+		display: flex;
+		flex-direction: column;
+		@include media-breakpoint-up(lg){
+			flex-direction: row;
+		}
+	}
+	&__cards{
+		@include media-breakpoint-down(lg){
+			display: flex;
+			justify-content: center;
+		}
+		@include media-breakpoint-down(sm){
+			flex-direction: column;
+			align-items: center;
+		}
+		@include media-breakpoint-up(lg){
+			margin-right: rem(15);
+		}
+		&--second{
+			@include media-breakpoint-up(lg){
+				margin-top: rem(-230);
+				margin-right: 0;
+				margin-left: rem(15);
+			}
+		}
+	}
+	.shop-item{
+		@include media-breakpoint-up(lg){
+			min-height: auto;
+		}
+		margin-top: rem(40);
+		@include media-breakpoint-down(lg){
+			margin-left: rem(15);
+			margin-right: rem(15);
+			picture{
+				min-height: auto;
+				max-height:none;
+			}
+		}
+	}
+}
+
+.sShipment{
+	--sPB:#{rem(64)};
+	background-color: $white;
+	position: relative;
+	z-index: 2;
+	h2{
+		line-height: rem(70);
+	}
+	&__caption{
+		font-size: $large;
+		font-weight: 300;
+		line-height: rem(28);
+		padding-top: rem(15);
+		@include media-breakpoint-up(lg){
+			padding-left: rem(3);
+		}
+	}
+	&__ref{
+		margin-top: rem(30);
+		margin-bottom: 10px;
+		padding-left: rem(31);
+		padding-right: rem(24);
+		padding-top: rem(19);
+		padding-bottom: rem(19);
+		box-shadow: 0 7px $small 3px rgba(202, 207, 221, 0.08);
+		border-radius: $border-radius;
+		background-color: $white;
+		display: flex;
+		&-title{
+			color: $success;
+			line-height: rem(30);
+			width:rem(90);
+		}
+		&-caption{
+			color: $secondary;
+			line-height: rem(24);
+			padding-top: rem(3);
+			padding-left: rem(36);
+		}
+	}
+	.picture-bg{
+		// width: 56%;
+		// right: rem(275);
+		left: auto;
+		right: 0;
 	}
 }
