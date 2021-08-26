@@ -64,7 +64,7 @@ mixin sShipment(data)
 		+pic('shipment-bg.jpg','bg',0).picture-bg.d-none.d-lg-block
 		.container
 			.row
-				.col-12.col-lg-6.col-ship
+				.col-12.col-lg-6
 					h2 Создаем отправку
 					+e.caption Когда все купленные товары придут на&nbsp;наш склад, вы&nbsp;увидите их&nbsp;в&nbsp;личном кабинете и&nbsp;сможете сформировать отправку посылки домой. Вы&nbsp;можете отправить одну посылку или объединить несколько покупок из&nbsp;разных магазинов в&nbsp;одно отправление.
 					+e.ref
@@ -73,3 +73,28 @@ mixin sShipment(data)
 					+e.ref
 						+e.ref-title.h5 Проверить
 						+e.ref-caption Мы&nbsp;также можем проверить полученные вами товары на&nbsp;работоспособность, соответствие заказу или измерить параметры и&nbsp;сделать фото.
+
+mixin sPackage(data)
+	+b.SECTION.sPackage.section.bg-wrap#sPackage&attributes(attributes)
+		+pic('package-bg.png','',0).picture-bg.d-none.d-xxl-block
+		.container
+			.row
+				.col-12.col-xxl-6.d-none.d-xxl-block
+				.col-12.col-xxl-6
+					h2 Получаем посылку
+					+e.caption Создавая отправку, выбирайте самый удобный для вас способ доставки&nbsp;&mdash; в&nbsp;почтовое отделение, до&nbsp;пункта выдачи заказов или курьерской службой прямо домой. Сразу после отправки посылки со&nbsp;склада в&nbsp;вашем личном кабинете появится трекинг-номер для ее&nbsp;отслеживания.
+					+e.ref
+						+e.ref-title.h5 Важно!
+						+e.ref-caption После получение поссылки важно снять видео или сфотографировать для решения вопросов по&nbsp;страховым случаям.
+
+mixin sAddr(data)
+	+b.SECTION.sAddr.section.bg-wrap#sAddr&attributes(attributes)
+		+pic('question-bg.png','',0).picture-bg.d-none.d-xxl-block
+		.container
+			.row
+				.col-12.col-xxl-6
+					h2 Зачем мне этот адрес в&nbsp;Германии?
+					+e.caption--first Покупая с&nbsp;адресом WiWeWu, вы&nbsp;пользуетесь правами и преимуществами&nbsp;гражданина Евросоюза. Не&nbsp;действует никаких ограничений.
+					+e.caption--second Получайте скидки и&nbsp;используйте промокоды, предназначенные только для жителей Германии. Покупайте даже в&nbsp;тех магазинах, которые не&nbsp;доставляют в&nbsp;Россию и&nbsp;СНГ. Выбирайте из&nbsp;ассортимента, которого нет для других стран. WiWeWu подскажет горячие предложения.
+					+e.btn(href='#') Регистрация
+						span
