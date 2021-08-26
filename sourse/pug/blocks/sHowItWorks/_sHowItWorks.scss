@@ -51,7 +51,8 @@
 		color: #bbc6b2;
 		line-height: 24px;
 		padding-top: rem(5);
-		span{
+		.hiw-span{
+			cursor: pointer;
 			color:$white;
 			text-decoration: underline;
 			text-decoration-style: dotted;
@@ -74,6 +75,22 @@
 		height: rem(62);
 		text-align: center;
 		padding-top: rem(13);
+	}
+	&__hover-info{
+		position: absolute;
+		display: none;
+		left: 42.1%;
+		bottom: rem(13);
+		width: rem(219);
+		padding-left: rem(10);
+		padding-top: rem(9);
+		padding-bottom: rem(9);
+		background-color: $white;
+		color: $secondary;
+		font-size: rem(12);
+		line-height: 18px;
+		box-shadow: 0 7px $small 3px rgba(202, 207, 221, 0.08);
+		border-radius: $border-radius;
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

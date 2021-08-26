@@ -410,6 +410,12 @@ function eventHandler() {
 	$('.accordion-button').click(function () {
 		$(this).toggleClass('active').next().slideToggle();
 	});
+	$('.hiw-span').mouseover(function () {
+		$('.sHowItWorks__hover-info').css('display', 'block');
+	});
+	$('.hiw-span').mouseout(function () {
+		$('.sHowItWorks__hover-info').css('display', 'none');
+	});
 }
 
 ;
