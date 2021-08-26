@@ -6,11 +6,12 @@
 		// @extend .form-control;
 		//  outline: 0 !important;
 		resize: none;
-		background-image: url(../img/svg/input-check.svg);
-		background-size: rem(9) rem(13);
-		background-position: calc(100% - #{rem(16)}) -1px;
-		background-repeat: no-repeat;
-		
+		&.with-bg {
+			background-image: url(../img/svg/input-check.svg);
+			background-size: rem(9) rem(13);
+			background-position: calc(100% - #{rem(16)}) -1px;
+			background-repeat: no-repeat;
+		}
 	}
 	&__btn {
 		cursor: pointer;
