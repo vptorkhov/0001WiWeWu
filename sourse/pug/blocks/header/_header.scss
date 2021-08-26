@@ -2,7 +2,7 @@
 	// start .header
 	.header {
 		@include media-breakpoint-up(lg){
-			z-index: 2;
+			// z-index: 2;
 		}
 		position: relative;
 	@include media-breakpoint-up(xl) {}

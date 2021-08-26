@@ -300,8 +300,8 @@ function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('tabs');
-	JSCCommon.mobileMenu(); // JSCCommon.inputMask();
-	// JSCCommon.sendForm();
+	JSCCommon.mobileMenu();
+	JSCCommon.inputMask(); // JSCCommon.sendForm();
 	// JSCCommon.heightwindow();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
@@ -316,7 +316,7 @@ function eventHandler() {
 	}
 
 	function setFixedNav() {
-		let topNav = document.querySelector('.top-nav  ');
+		let topNav = document.querySelector('.top-nav');
 		if (!topNav) return;
 		window.scrollY > 0 ? topNav.classList.add('fixed') : topNav.classList.remove('fixed');
 	}
@@ -367,15 +367,10 @@ function eventHandler() {
 	// });
 
 	const swiper4 = new Swiper('.sReviews__slider--js', {
-		// slidesPerView: 5,
-		// ...defaultSl,
 		slidesPerView: 1,
 		spaceBetween: 30,
-		// freeMode: true,
 		loopFillGroupWithBlank: true,
-		// touchRatio: 0.2,
 		slideToClickedSlide: true,
-		// freeModeMomentum: true,
 		loop: true,
 		watchOverflow: true,
 		navigation: {
