@@ -1,0 +1,18 @@
+mixin sQuestions(data)
+	// start sQuestions
+	+b.SECTION.sQuestions.section#sQuestions&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Остались вопросы?
+				p Оставьте контактные данные и&nbsp;наш менеджер свяжется с&nbsp;Вами в&nbsp;течение 10&nbsp;минут.
+			+soc-questions
+			+form-wrap()
+				.row
+					.col
+						+input('Номер телефона','tel')
+					.col
+						+e.BUTTON.btn.btn(href="#") Отправить
+							span
+				+e.policy.text-center Нажимая «Отправить», Вы соглашаетесь с #[a(href='#') политикой конфиденциальности данных]
+
+	// end sQuestions
