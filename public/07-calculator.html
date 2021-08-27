@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Как это работает</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=575,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no">
+		<script>
+			let viewport = document.querySelector("meta[name=viewport]");
+			var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+			if (is_safari) {
+				//- alert(navigator.userAgent);
+				function w() {
+					this.outerWidth > 575 
+						? viewport.content = "width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" 
+						:  viewport.content = "width=575,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no" 
+					//- alert(this.outerWidth + ', '+  viewport.content);
+				}
+				 w();
+				window.addEventListener('resize', () => { 
+				 w();
+				}, { passive: true });
+			}
+		</script>
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link rel="preconnect" href="https://fonts.googleapis.com"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&amp;display=swap" rel="stylesheet"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&amp;display=swap" rel="stylesheet"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&amp;display=swap" rel="stylesheet"/>
+		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+	</head>
+	<body class="hiw-page" data-bg="06-HowItWorks.jpg">
+		<div class="main-wrapper">
+			<!-- start header-->
+			<header class="header" id="header">
+				<!-- start top-nav-->
+				<div class="top-nav block-with-lazy">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<div class="menu-mobile menu-mobile--js">
+									<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+									</div>
+									<div class="menu-mobile__inner">
+										<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+											<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">О компании</a>
+												<ul class="sub-menu">
+													<li><a href=""> Наименование услуги</a></li>
+													<li><a href=""> Наименование услуги</a></li>
+													<li><a href=""> Наименование услуги</a></li>
+												</ul>
+											</li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Как мы работаем</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Тарифы</a></li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Услуги</a></li>
+											<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">Магазины</a>
+												<ul class="sub-menu">
+													<li><a href=""> Магазин</a></li>
+													<li><a href=""> Магазин</a></li>
+													<li><a href=""> Магазин</a></li>
+												</ul>
+											</li>
+											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор Доставки</a></li>
+											<li class="menu-item login" itemprop="item"><a href="#" itemprop="url">Регистрация&nbsp;/ Вход</a></li>
+										</ul>
+										<div class="topLine p-3 d-lg-none">
+											<div class="mb-4">
+												<div class="strong mb-2"><a class="text-body" href="mailto:info@newclients1.ru">info@newclients1.ru</a></div>
+												<div class="small text-secondary add-info">Санкт-Петербург</div>
+											</div>
+											<div class="tell strong mb-2"><a class="text-body" href="tel:+7(812)703-86-28">
+													<svg class="icon icon-whatsapp ">
+														<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+													</svg>+7 (812) 703-86-28</a></div>
+											<div class="small text-secondary mb-2 add-info">Пн-Пт: c 09:00 до 20:00</div>
+											<a class="topLine__btn w-100 btn-menu" href="#">Заказать звонок
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end top-nav-->
+				<!-- start topLine-->
+				<div class="topLine section" id="topLine">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-auto col"><a href="/"><img class="res-i logo" src="img/@2x/logo.png" alt=""/></a></div>
+							<div class="col d-none d-lg-block">
+								<div class="topLine__text text-secondary">доставка товаров из&nbsp;Германии в&nbsp;любую точку мира
+								</div>
+							</div>
+							<div class="col-auto d-none d-lg-block col-time">
+								<div class="time">пн-пт: с&nbsp;9:00 до&nbsp;18:00 <span>по&nbsp;Берлину</span></div><a class="email" href="mailto:support@wiwewu.com">support@wiwewu.com</a>
+							</div>
+							<div class="topLine__soc-item col-auto"><a href="#"><img src="img/svg/telegram.svg"/></a><a href="#"><img src="img/svg/viber.svg"/></a><a href="#"><img src="img/svg/whatsapp.svg"/></a>
+							</div>
+							<div class="col-auto d-none d-md-block"><a class="tel" href="tel:88000000000">8 800 000-00-00</a><a class="call" href="#">Заказать звонок</a></div>
+							<div class="col-auto d-lg-none">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end topLine-->
+			</header>
+			<!-- end header-->
+			<div class="container">
+				<div class="wrap">
+					<div class="total strong">0</div>
+					<div class="input-range-wrap">
+						<div class="input-range-value">0</div>
+						<input class="range-input--js" type="text" data-min="2" data-max="100" data-prefix="&lt; " data-postfix=" кг">
+					</div>
+					<div class="input-range-wrap">
+						<div class="input-range-value">0</div>
+						<input class="range-input--js" type="text" data-min="1" data-max="1000" data-postfix=" €">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal-win modal-win--call" id="modal-call" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<input type="hidden" name="example-input-field"/>
+					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+					<input class="utm_source" type="hidden" name="utm_source"/>
+					<input class="utm_term" type="hidden" name="utm_term"/>
+					<input class="utm_medium" type="hidden" name="utm_medium"/>
+					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+					<div class="h4">Заказать звонок</div>
+					<div class="form-wrap__caption">Заполните форму, и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время
+					</div>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше имя" name="text"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" name="tel"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn" type="submit">Забронировать место
+					</button>
+					<div class="form-wrap__agreement">Я&nbsp;согласен(а) на&nbsp;обработку и&nbsp;хранение моих персональных данных в&nbsp;соответствии с&nbsp;условиями.
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<!-- modal-->
+		<!-- modal libs-->
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox.umd.js"></script>
+		<script src="libs/fslightbox/index.js"></script>
+		<!-- modal libs-->
+		<!-- slider libs-->
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<!-- /slider libs-->
+		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+		<script src="libs/inputmask/inputmask.min.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

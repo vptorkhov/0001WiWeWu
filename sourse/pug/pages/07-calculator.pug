@@ -1,0 +1,33 @@
+extends layout/main.pug
+
+
+include ../blocks/sHowItWorks/_sHowItWorks.pug
+
+block variables
+	- let  mainPage= 'hiw-page'
+	- let  bg= '06-HowItWorks.jpg'
+block title
+	- let  title= 'Как это работает'
+	title= title
+block pagecontent 
+	//- +mob-mnu()
+	+header()
+		+top-nav()
+		+topLine()
+	.container
+		.wrap
+			.total.strong 0
+			.input-range-wrap
+				.input-range-value 0
+				input.range-input--js(type="text" data-min= '2' data-max= '100' data-prefix='< ' data-postfix=' кг')
+			.input-range-wrap
+				.input-range-value 0
+				input.range-input--js(type="text" data-min= '1' data-max= '1000'  data-postfix=' €')
+	//- 	+breadcrumb(`Главная`, title)
+	//- +sHowItWorks().top-section
+	//- +sRegistration()
+	//- +sPurchases()
+	//- +sShipment()
+	//- +sPackage()
+	//- +sAddr()
+	//- +footer()

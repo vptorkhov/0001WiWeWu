@@ -406,7 +406,53 @@ function eventHandler() {
 	$('.hiw-span').mouseout(function(){
 		$('.sHowItWorks__hover-info').css('display','none')
 	});
+
+	$(".input-range-wrap").each(function() {
+		let th = $(this);
+		var $range = th.find(".range-input--js");
+		var $input = th.find(".input-range-value");
+		// var instance;
+		
+		$range.ionRangeSlider({
+				type: "single",
+				skin: "round",
+				hide_min_max: true,
+				onStart: function(data) {
+					setTimeout(() => {
+						let value = th.find(".irs-single").text();
+						$input.text(value);
+					}, 500);
+				},
+				onChange: function(data) {
+					setTimeout(() => {
+						let value = th.find(".irs-single").text();
+						$input.text(value);
+					}, 500);
+				}
+		});
+		
+		// instance = $range.data("ionRangeSlider");
+		
+		// $input.on("input", function() {
+		// 		var val = $(this).prop("value");
+		
+		// 		// validate
+		// 		if (val < min) {
+		// 				val = min;
+		// 		} else if (val > max) {
+		// 				val = max;
+		// 		}
+		
+		// 		instance.update({
+		// 				from: val
+		// 		});
+		// });
+	})
 };
+
+
+
+
 if (document.readyState !== 'loading') {
 	eventHandler();
 } else {

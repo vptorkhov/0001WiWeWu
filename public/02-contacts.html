@@ -24,7 +24,6 @@
 			}
 		</script>
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
-		<link href="css/main.min.css" rel="stylesheet"/>
 		<link rel="preconnect" href="https://fonts.googleapis.com"/>
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&amp;display=swap" rel="stylesheet"/>
@@ -34,6 +33,8 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com"/>
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&amp;display=swap" rel="stylesheet"/>
+		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body data-bg="02-contacts.png">
 		<div class="main-wrapper">
@@ -384,8 +385,8 @@
 				</div>
 			</footer>
 		</div>
-		<div class="d-none">
-			<div class="form-wrap modal-win modal-form" id="modal-call">
+		<div class="modal-win modal-win--call" id="modal-call" style="display: none">
+			<div class="form-wrap">
 				<form>
 					<input type="hidden" name="example-input-field"/>
 					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
@@ -393,25 +394,23 @@
 					<input class="utm_term" type="hidden" name="utm_term"/>
 					<input class="utm_medium" type="hidden" name="utm_medium"/>
 					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
-					<div class="text-center">
-						<div class="form-wrap__title h3 ttu">Обратный звонок
-						</div>
-						<p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
+					<div class="h4">Заказать звонок</div>
+					<div class="form-wrap__caption">Заполните форму, и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время
 					</div>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text" required="required"/> 
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше имя" name="text"/>
 					</div>
 					<!-- +e.input-wrap-->
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" name="tel" required="required"/>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" name="tel"/>
 					</div>
-					<!-- +e.input-wrap--><input class="form-wrap__btn" type="submit" value="Рассчитать"/>
-					<div class="form-wrap__polite">
-						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
-						</label>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn" type="submit">Забронировать место
+					</button>
+					<div class="form-wrap__agreement">Я&nbsp;согласен(а) на&nbsp;обработку и&nbsp;хранение моих персональных данных в&nbsp;соответствии с&nbsp;условиями.
 					</div>
 				</form>
 			</div>
-			<!-- #modal-call-->
 		</div>
+		<!-- #modal-call-->
 		<!-- modal-->
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>
@@ -421,8 +420,8 @@
 		<!-- slider libs-->
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<!-- /slider libs-->
+		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
 		<script src="libs/inputmask/inputmask.min.js"></script>
-		<script src="js/libs.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

@@ -1,0 +1,15 @@
+extends layout/main.pug
+
+block variables
+	- let  mainPage= 'body-main'
+	- let  bg= 'index.jpg'
+block title
+	- let  title= 'WiWeWu'
+	title= title
+block pagecontent 
+	.section.container
+		mixin btn(t,a)
+			a.btn.btn-danger.m-2.link-modal-js(href=a  )= t 
+		+btn("Заказать звонок",'#modal-call')
+		+btn("Инструктор 1",'#modal-instructor-1')
+		+btn("Инструктор 2",'#modal-instructor-2')
