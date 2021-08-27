@@ -400,12 +400,12 @@ function eventHandler() {
 		.next().slideToggle();
 	}
 	);
-	$('.hiw-span').mouseover(function(){
-		$('.sHowItWorks__hover-info').css('display','block')
-	});
-	$('.hiw-span').mouseout(function(){
-		$('.sHowItWorks__hover-info').css('display','none')
-	});
+	// $('.hiw-span').mouseover(function(){
+	// 	$('.sHowItWorks__hover-info').css('display','block')
+	// });
+	// $('.hiw-span').mouseout(function(){
+	// 	$('.sHowItWorks__hover-info').css('display','none')
+	// });
 
 	$(".input-range-wrap").each(function() {
 		let th = $(this);

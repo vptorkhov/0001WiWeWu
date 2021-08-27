@@ -13,7 +13,7 @@ extends layout/main.pug
 include ../blocks/sCompany/_sCompany.pug 
 
 block variables
-	- let  mainPage= null
+	- let  mainPage= 'company-page'
 	- let  bg= '04-company.jpg'
 block title
 	- let  title= 'О компании'
@@ -23,7 +23,7 @@ block pagecontent
 	+header()
 		+top-nav()
 		+topLine()
-	.container(style="position: relative; z-index: 4;")
+	.container.bread-container
 		+breadcrumb(`Главная`, title)
 	+sCompany().top-section
 	+sCompanyAdv()
