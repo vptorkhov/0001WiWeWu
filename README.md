@@ -4,3 +4,4 @@
 4. <https://vptorkhov.github.io/0001WiWeWu/public/04-company.html>
 5. <https://vptorkhov.github.io/0001WiWeWu/public/05-shopcard.html>
 6. <https://vptorkhov.github.io/0001WiWeWu/public/06-HowItWorks.html>
+7. <https://vptorkhov.github.io/0001WiWeWu/public/07-calculator.html>
