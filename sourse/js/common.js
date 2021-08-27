@@ -390,19 +390,18 @@ function eventHandler() {
 		.next().slideToggle();
 	}
 	);
-	$('.hiw-span').mouseover(function(){
-		$('.sHowItWorks__hover-info').css('display','block')
-	});
-	$('.hiw-span').mouseout(function(){
-		$('.sHowItWorks__hover-info').css('display','none')
-	});
-
 	$(".input-range-wrap").each(function() {
 		let th = $(this);
 		var $range = th.find(".range-input--js");
 		var $input = th.find(".input-range-value");
 		// var instance;
 		
+		function total(){
+			let iWeight = $(".range-input--weight").val();
+			let iPrice = $(".range-input--price").val();
+			let total = +iPrice/20*+iWeight;
+			$('.total').text(Math.ceil(total)+' €')
+		};
 		$range.ionRangeSlider({
 				type: "single",
 				skin: "round",
@@ -411,13 +410,16 @@ function eventHandler() {
 					setTimeout(() => {
 						let value = th.find(".irs-single").text();
 						$input.text(value);
+						// $input.prop("value", data.from);
+						total();
+
 					}, 500);
 				},
 				onChange: function(data) {
-					setTimeout(() => {
-						let value = th.find(".irs-single").text();
-						$input.text(value);
-					}, 500);
+					let value = th.find(".irs-single").text();
+					$input.text(value);
+					total();
+					// console.log($range.val())
 				}
 		});
 		

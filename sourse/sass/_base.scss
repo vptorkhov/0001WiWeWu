@@ -89,15 +89,14 @@ body {
 	}
 }
 
-// .main-wrapper {
-// 	display: flex;
-// 	flex-direction: row;
-// 	// overflow: scroll;
-// 	// width: 100%;
-// 	// height: 100vh;
-// 	// height: calc(var(--vh, 1vh) * 100);
-
-// }
+.main-wrapper { 
+	display: flex;
+	flex-direction: column; 
+	overflow: hidden;
+	width: 100%; 
+	min-height: 100vh;
+	min-height: calc(var(--vh, 1vh) * 100);
+}
 // .main-wrapper__inner{
 // 	// overflow-x: hidden;
 // 	display: flex;
@@ -522,4 +521,9 @@ h5 {
 	@include media-breakpoint-between(sm, lg) {
 		margin-top: rem(-28);
 	}
+}
+
+.bread-container{
+	position: relative;
+	z-index: 4;
 }

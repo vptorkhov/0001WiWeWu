@@ -54,11 +54,16 @@
 		color: #bbc6b2;
 		line-height: 24px;
 		padding-top: rem(5);
+		pointer-events: none;
+		&:hover{
+			--db: block;
+		}
 		.hiw-span {
 			cursor: pointer;
 			color: $white;
 			text-decoration: underline;
 			text-decoration-style: dotted;
+			pointer-events: auto;
 		}
 	}
 	&__instruction {
@@ -80,17 +85,20 @@
 		padding-top: rem(13);
 	}
 	&__hover-info {
-		position: absolute;
-		display: none;
-		left: rem(50);
-		@include media-breakpoint-up(lg){
-			left: 42.1%;
-		}
-		@include media-breakpoint-down(sm){
-			left: rem(10);
-			bottom: rem(30);
-		}
-		bottom: rem(13);
+		// position: absolute;
+		// display: none;
+		// left: rem(50);
+		// @include media-breakpoint-up(lg){
+		// 	left: 42.1%;
+		// }
+		// @include media-breakpoint-down(sm){
+		// 	left: rem(10);
+		// 	bottom: rem(30);
+		// }
+		// bottom: rem(13);
+		// display: var(--db-hiw);
+		display: var(--db, none);
+		margin-top: 30px;
 		width: rem(219);
 		padding-left: rem(10);
 		padding-top: rem(9);
