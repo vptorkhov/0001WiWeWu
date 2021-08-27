@@ -1,10 +1,8 @@
-
 $h: em(2);
 @include media-breakpoint-down(lg) {
-
 	.toggle-menu-mobile {
 		display: block;
-		height: $h* 12;
+		height: $h * 12;
 		position: relative;
 		color: $primary;
 		font-size: 32px;
@@ -13,32 +11,30 @@ $h: em(2);
 		&.on {
 			color: #ffffff;
 		}
-		
+
 		span:after,
 		span:before {
 			content: "";
 			position: absolute;
 			left: 0;
 		}
-		
+
 		span {
 			@include a-cent(y);
 		}
-		
+
 		span:before {
-			
-			
 			top: $h * 2;
 		}
-		
+
 		span:after {
 			bottom: $h * 2;
 		}
-		
-		span { 
+
+		span {
 			display: block;
 		}
-		
+
 		span,
 		span:after,
 		span:before {
@@ -49,128 +45,125 @@ $h: em(2);
 			transition: all 0.3s;
 			backface-visibility: hidden;
 			border-radius: 6px;
-		
-	transform-origin: 50% 50%;
-}
 
-// &.on {
-// 	// opacity: 0;
-// }
+			transform-origin: 50% 50%;
+		}
 
-&.on span {
-	background-color: transparent;
-}
+		// &.on {
+		// 	// opacity: 0;
+		// }
 
-&.on span:after,
-&.on span:before {
-
-	top: 0;
-	bottom: 0;
-	
-}
-
-&.on span:before {
-	transform: rotate3d(0,0,1, 45deg);
-}
-
-&.on span:after {
-	transform: rotate3d(0,0,1, -45deg);
-}
-}
-
-.menu-mobile {
-position: fixed !important;
-z-index: 999;
-max-width: 85%;
-height: calc(var(--vh, 1vh) * 100);
-width: 280px;
-top: 0;
-// left: 0;
-right: 0;
-background-color: $secondary;
-&:not(.active){
-	transform: translate3d(120%, 0,0);
-	--opacity: 0;
-
-}
-@include mt(.6s);
-will-change: transform;
-
-&__inner {
-	padding: rem(20) 0;
-	overflow-x: hidden;
-	overflow-y: auto;
-	-webkit-overflow-scrolling: touch;
-	height: 100%;
-	@include mt(.3s);
-	transition-delay: .4s;
-	opacity: var(--opacity);
-}
-
-&.active { 
-	.toggle-menu-mobile {
-		opacity: 1;
-	}
-}
-
-.toggle-menu-mobile {
-	// position: relative;
-	cursor: pointer;
-	margin-left: -15%;
-	position: absolute;
-	opacity: 0;
-	left: 0;
-	right: auto;
-	color: #FFF;
-	top: 10px;
-	z-index: 9999;
-	background-color: transparent;
-
-	span,
-	span:after,
-	span:before {
-		background-color: #FFF;
-	}
-
-	&.on {
-		opacity: 1;
-
-		span {
+		&.on span {
 			background-color: transparent;
 		}
+
+		&.on span:after,
+		&.on span:before {
+			top: 0;
+			bottom: 0;
+		}
+
+		&.on span:before {
+			transform: rotate3d(0, 0, 1, 45deg);
+		}
+
+		&.on span:after {
+			transform: rotate3d(0, 0, 1, -45deg);
+		}
 	}
-}
 
-ul {
-	position: relative;
-}
+	.menu-mobile {
+		position: fixed !important;
+		z-index: 999;
+		max-width: 85%;
+		height: calc(var(--vh, 1vh) * 100);
+		width: 280px;
+		top: 0;
+		// left: 0;
+		right: 0;
+		background-color: $secondary;
+		&:not(.active) {
+			transform: translate3d(120%, 0, 0);
+			--opacity: 0;
+		}
+		@include mt(0.6s);
+		will-change: transform;
+		@include media-breakpoint-down(sm) {
+			width: 80%;
+		}
 
-li {
-	display: block;
-	margin: 0;
-	border-top: 1px solid rgba(255, 255, 255, .13);
+		&__inner {
+			padding: rem(20) 0;
+			overflow-x: hidden;
+			overflow-y: auto;
+			-webkit-overflow-scrolling: touch;
+			height: 100%;
+			@include mt(0.3s);
+			transition-delay: 0.4s;
+			opacity: var(--opacity);
+		}
 
-	a {
-		// font-size: 16px;
+		&.active {
+			.toggle-menu-mobile {
+				opacity: 1;
+			}
+		}
 
-		padding: 10px;
-		display: block;
+		.toggle-menu-mobile {
+			// position: relative;
+			cursor: pointer;
+			margin-left: -15%;
+			position: absolute;
+			opacity: 0;
+			left: 0;
+			right: auto;
+			color: #fff;
+			top: 10px;
+			z-index: 9999;
+			background-color: transparent;
 
+			span,
+			span:after,
+			span:before {
+				background-color: #fff;
+			}
+
+			&.on {
+				opacity: 1;
+
+				span {
+					background-color: transparent;
+				}
+			}
+		}
+
+		ul {
+			position: relative;
+		}
+
+		li {
+			display: block;
+			margin: 0;
+			border-top: 1px solid rgba(255, 255, 255, 0.13);
+
+			a {
+				// font-size: 16px;
+
+				padding: 10px;
+				display: block;
+			}
+		}
+		a {
+			.icon {
+				margin-right: 8px;
+			}
+		}
+
+		.tell a.text-body {
+			.icon {
+				position: relative;
+			}
+			// margin-left: 30px;
+		}
 	}
-}
-a{
-	.icon{
-		margin-right: 8px;
-	}
-}
-
-.tell a.text-body {
-	.icon{
-		position: relative;
-	}
-	// margin-left: 30px;
-}
-}
-
-
 }

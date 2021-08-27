@@ -302,27 +302,27 @@ function eventHandler() {
 	// 	document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	// }
 
-	function setFixedNav() {
-		let topNav = document.querySelector('.top-nav');
-		if (!topNav) return;
-		window.scrollY > 0
-			? topNav.classList.add('fixed')
-			: topNav.classList.remove('fixed');
-	}
+	// function setFixedNav() {
+	// 	let topNav = document.querySelector('.top-nav');
+	// 	if (!topNav) return;
+	// 	window.scrollY > 0
+	// 		? topNav.classList.add('fixed')
+	// 		: topNav.classList.remove('fixed');
+	// }
 
-	function whenResize() {
-		setFixedNav();
-	}
+	// function whenResize() {
+	// 	setFixedNav();
+	// }
 
-	window.addEventListener('scroll', () => {
-		setFixedNav();
+	// window.addEventListener('scroll', () => {
+	// 	setFixedNav();
 
-	}, { passive: true })
-	window.addEventListener('resize', () => {
-		whenResize();
-	}, { passive: true });
+	// }, { passive: true })
+	// window.addEventListener('resize', () => {
+	// 	whenResize();
+	// }, { passive: true });
 
-	whenResize();
+	// whenResize();
 
 
 	// let defaultSl = {
@@ -382,7 +382,9 @@ function eventHandler() {
 	// modal window
 	$(".menu-mobile--js  .menu-item-has-children>a").click(function(e){
 		e.preventDefault();
-		$(this).toggleClass('active').next().slideToggle()
+		if ($(window).width() < 992) {
+			$(this).toggleClass('active').next().slideToggle()
+		}
 	})
 
 	$('.accordion-button').click(function(){
