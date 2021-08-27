@@ -27,15 +27,17 @@
 
 	--fancybox-bg: rgba(0, 0, 0, 0.65);
 	// --fancybox-bg: rgba(24, 24, 27, .77);
+	.fancybox__slide {
+		--carousel-button-width: 48px;
+		--carousel-button-height: 48px;
 
-	--carousel-button-width: 48px;
-	--carousel-button-height: 48px;
+		--carousel-button-svg-width: 27px;
+		--carousel-button-svg-height: 27px;
 
-	--carousel-button-svg-width: 24px;
-	--carousel-button-svg-height: 24px;
-
-	--carousel-button-svg-stroke-width: 2.5;
-	--carousel-button-svg-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0/ 0.4));
+		--carousel-button-svg-stroke-width: 2.5;
+		--carousel-button-svg-filter: none;
+		// --carousel-button-svg-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0/ 0.4));
+	}
 }
 
 @include media-breakpoint-up(xl) {
