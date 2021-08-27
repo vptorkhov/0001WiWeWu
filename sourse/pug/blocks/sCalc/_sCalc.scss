@@ -4,6 +4,7 @@
 	--sPB: #{rem(116)};
 	// --sTPB: ;
 	background-color: $light;
+	flex-grow: 1;
 	h2{
 		padding-top: rem(6);
 		@include media-breakpoint-down(lg){

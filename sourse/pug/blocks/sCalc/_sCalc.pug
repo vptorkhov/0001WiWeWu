@@ -21,16 +21,12 @@ mixin sCalc(data)
 						.total 25.25&nbsp;&euro;
 						.input-range-wrap
 							.input-range-title Вес посылки&nbsp;
-								//- span до&nbsp;
 							.input-range-value 0
-							//- .input-range-measure &nbsp;кг
-							input.range-input--js(type="text" data-min= '2' data-max= '100' data-prefix='< ' data-postfix=' кг')
+							input.range-input--js.range-input--weight(type="text" data-min= '2' data-max= '100' data-prefix='< ' data-postfix=' кг')
 						.input-range-wrap
 							.input-range-title Цена покупки&nbsp;
-								//- span до&nbsp;
 							.input-range-value 0
-							//- .input-range-measure &nbsp;кг
-							input.range-input--js(type="text" data-min= '1' data-max= '1000'  data-postfix=' €')
+							input.range-input--js.range-input--price(type="text" data-min= '1' data-max= '1000'  data-postfix=' €')
 					+e.note Стоимость доставки товара размером до&nbsp;120&times;60&times;60см, объединяем до&nbsp;20кг. Один товар с&nbsp;негабаритными размерами 180&times;60&times;60см весом до&nbsp;30кг + 25&nbsp;&euro;. Обработка заказа общей стоимостью менее 50&nbsp;&euro; стоит 10&nbsp;&euro;. На&nbsp;купленный товар без немецкого НДС&nbsp;+15% комиссии.
 					+e.btn(href="#") Бесплатная регистрация
 						span
