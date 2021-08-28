@@ -40,6 +40,10 @@
 			.title {
 				position: absolute;
 				top: 81.61%;
+				@include media-breakpoint-down(sm){
+					top: auto;
+					bottom: 18.39%;
+				}
 				left: 5.75%;
 				color: white;
 				font-weight: 300;
@@ -49,6 +53,10 @@
 			a {
 				position: absolute;
 				top: 89.7%;
+				@include media-breakpoint-down(sm){
+					top: auto;
+					bottom: 6%;
+				}
 				left: 5.75%;
 				color: #ffffff;
 				font-size: 11px;
