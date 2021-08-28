@@ -21,7 +21,7 @@ mixin modal()
 			+e.btn.btn(type="submit") Зарегистрироваться
 				span
 			+e.option
-				a(href='#') Вход
+				a.link-modal-js(href= '#modal-enter') Вход
 	// #modal-register
 
 	+b.modal-win--enter(id="modal-enter" class=" " style="display: none" )
@@ -34,7 +34,7 @@ mixin modal()
 			+e.btn.btn(type="submit") Вход
 				span
 			+e.option
-				a(href='#') Регистрация
+				a.link-modal-js(href= '#modal-register') Регистрация
 	// #modal-enter
 
 	+b.modal-win--call(id="modal-call" class=" " style="display: none" )
