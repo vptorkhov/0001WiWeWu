@@ -1,59 +1,74 @@
 // start .sShopcard
 .sShopcard {
 	background-color: $light;
-	@include media-breakpoint-up(lg){
-		--sPB:0px;
+	@include media-breakpoint-up(lg) {
+		--sPB: 0px;
 	}
-	h2{
+	h2 {
 		line-height: 70.01px;
 	}
-	&__category{
+	&__category {
 		display: flex;
-		.spec{
+		.spec {
 			margin-right: rem(9);
 			padding-top: rem(4);
 		}
 	}
-	&__title{
+	&__title {
 		padding-top: rem(15);
 		font-family: Montserrat;
 		font-size: rem(16);
 		line-height: 30px;
 		font-weight: 700;
 	}
-	&__caption{
-		@include media-breakpoint-up(lg){
+	&__caption {
+		@include media-breakpoint-up(lg) {
 			width: 87%;
 		}
-		@include media-breakpoint-down(lg){
+		@include media-breakpoint-down(lg) {
 			text-align: justify;
 		}
 		padding-top: rem(3);
 		color: $secondary;
 		line-height: 24px;
 	}
-	.pic-shop{
+	.pic-shop {
 		padding: 0;
-		padding-top: rem(22);
-		picture{
-			margin-left: rem(-16);
-			background-color:$white;
+		padding-top: rem(30);
+		@include media-breakpoint-up(lg) {
+			padding-top: rem(22);
+		}
+		picture {
+			background-color: $white;
+			max-width: 100%;
+			@include media-breakpoint-up(lg) {
+				margin-left: rem(-16);
+			}
+			img {
+				width: 100%;
+			}
 		}
 	}
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.sShopcard
 
-
-.sShopPopular{
-	--sPT:#{rem(90)};
-	--sPB:#{rem(100)};
-	&__title{
+.sShopPopular {
+	--sPT: #{rem(90)};
+	--sPB: #{rem(100)};
+	&__title {
 		font-family: Montserrat;
 		font-weight: 700;
 		line-height: 70.01px;
@@ -61,17 +76,17 @@
 		font-size: rem(36);
 		padding-bottom: rem(25);
 	}
-	.row{
-		--bs-gutter-x:#{rem(30)};
-		--bs-gutter-y:#{rem(30)};
+	.row {
+		--bs-gutter-x: #{rem(30)};
+		--bs-gutter-y: #{rem(30)};
 	}
 }
 
-.sShopSimilar{
+.sShopSimilar {
 	background-color: $light;
-	--sPT:#{rem(84)};
-	--sPB:#{rem(112)};
-	&__title{
+	--sPT: #{rem(84)};
+	--sPB: #{rem(112)};
+	&__title {
 		font-family: Montserrat;
 		font-weight: 700;
 		line-height: 70.01px;
@@ -79,7 +94,7 @@
 		font-size: rem(36);
 		padding-bottom: rem(25);
 	}
-	.row{
-		--bs-gutter-y:#{rem(30)};
+	.row {
+		--bs-gutter-y: #{rem(30)};
 	}
 }
