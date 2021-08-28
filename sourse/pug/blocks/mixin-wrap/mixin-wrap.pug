@@ -40,7 +40,8 @@ mixin content-item(t)
 
 mixin shop-item(i)
 	+b.shop-item
-		+pic(`shop-item-${i}.png`,'bg',0)
+		a(href="#")
+			+pic(`shop-item-${i}.png`,'bg',0)
 		+e.wrap
 			+e.name Fadjo Юбка
 			+e.to-shop(href='#') в магазин
