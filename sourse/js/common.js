@@ -295,69 +295,59 @@ function eventHandler() {
 	// JSCCommon.animateScroll();
 	
 	// JSCCommon.CustomInputFile(); 
-	var x = window.location.host;
-	let screenName;
-	screenName = document.body.dataset.bg;
-	if (screenName && x.includes("localhost:30")) {
-		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
-	}
+	// var x = window.location.host;
+	// let screenName;
+	// screenName = document.body.dataset.bg;
+	// if (screenName && x.includes("localhost:30")) {
+	// 	document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
+	// }
 
-	function setFixedNav() {
-		let topNav = document.querySelector('.top-nav');
-		if (!topNav) return;
-		window.scrollY > 0
-			? topNav.classList.add('fixed')
-			: topNav.classList.remove('fixed');
-	}
+	// function setFixedNav() {
+	// 	let topNav = document.querySelector('.top-nav');
+	// 	if (!topNav) return;
+	// 	window.scrollY > 0
+	// 		? topNav.classList.add('fixed')
+	// 		: topNav.classList.remove('fixed');
+	// }
 
-	function whenResize() {
-		setFixedNav();
-	}
+	// function whenResize() {
+	// 	setFixedNav();
+	// }
 
-	window.addEventListener('scroll', () => {
-		setFixedNav();
+	// window.addEventListener('scroll', () => {
+	// 	setFixedNav();
 
-	}, { passive: true })
-	window.addEventListener('resize', () => {
-		whenResize();
-	}, { passive: true });
+	// }, { passive: true })
+	// window.addEventListener('resize', () => {
+	// 	whenResize();
+	// }, { passive: true });
 
-	whenResize();
+	// whenResize();
 
 
-	let defaultSl = {
-		spaceBetween: 0,
-		lazy: {
-			loadPrevNext: true,
-		},
-		watchOverflow: true,
-		loop: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-		pagination: {
-			el: ' .swiper-pagination',
-			type: 'bullets',
-			clickable: true,
-			// renderBullet: function (index, className) {
-			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-			// }
-		},
-	}
+	// let defaultSl = {
+	// 	spaceBetween: 0,
+	// 	lazy: {
+	// 		loadPrevNext: true,
+	// 	},
+	// 	watchOverflow: true,
+	// 	loop: true,
+	// 	navigation: {
+	// 		nextEl: '.swiper-button-next',
+	// 		prevEl: '.swiper-button-prev',
+	// 	},
+	// 	pagination: {
+	// 		el: ' .swiper-pagination',
+	// 		type: 'bullets',
+	// 		clickable: true,
+	// 		// renderBullet: function (index, className) {
+	// 		// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+	// 		// }
+	// 	},
+	// }
 
-	// const swiper4 = new Swiper('.sBanners__slider--js', {
-	// 	// slidesPerView: 5,
-	// 	...defaultSl,
-	// 	slidesPerView: 'auto',
-	// 	freeMode: true,
-	// 	loopFillGroupWithBlank: true,
-	// 	touchRatio: 0.2,
-	// 	slideToClickedSlide: true,
-	// 	freeModeMomentum: true,
-
-	// });
-	const swiper4 = new Swiper('.sReviews__slider--js', {
+	// 
+	const sReviewsSlider = new Swiper('.sReviews__slider--js', {
 		slidesPerView: 1,
 		spaceBetween: 30,
 		loopFillGroupWithBlank: true,
@@ -392,7 +382,9 @@ function eventHandler() {
 	// modal window
 	$(".menu-mobile--js  .menu-item-has-children>a").click(function(e){
 		e.preventDefault();
-		$(this).toggleClass('active').next().slideToggle()
+		if ($(window).width() < 992) {
+			$(this).toggleClass('active').next().slideToggle()
+		}
 	})
 
 	$('.accordion-button').click(function(){
@@ -449,11 +441,21 @@ function eventHandler() {
 		// 				from: val
 		// 		});
 		// });
-	})
+	});
+	
+	$('.toggle-pass-inp-js').click(function () {
+    let inp = this.parentElement.querySelector('input');
+    if (!inp) return
+
+    if (this.classList.contains('pass-visiable')) {
+      inp.setAttribute('type', 'password');
+    } else {
+      inp.setAttribute('type', 'text');
+    }
+
+    this.classList.toggle('pass-visiable');
+  });
 };
-
-
-
 
 if (document.readyState !== 'loading') {
 	eventHandler();

@@ -1,14 +1,74 @@
 
 mixin modal() 
 
+	+b.modal-win--register(id="modal-register" class=" " style="display: none" )
+		+form-wrap
+			.h3.text-center Регистрация
+			+input("Имя",'text')
+			+input("Фамилия",'text').with-bg
+			+input("Email",'email').with-bg(required)
+				em Придет письмо с подтверждением
+			+e.EM.instruction Выберите Германию (Deutschland или Germany) своей&nbsp;страной на сайте магазина. #[strong Обязательно]
+			//- +select('', 'Germany', 'Russia', 'France')
+			+input("Germany",'select')
+			+input("Персональный адрес",'text').with-bg
+			+input("Пароль",'password')
+				+e.show-hide-btn.toggle-pass-inp-js
+					+icon('pass-eye')
+			+input("Повторите пароль",'password')
+				+e.show-hide-btn.toggle-pass-inp-js
+					+icon('pass-eye')
+			+e.btn.btn(type="submit") Зарегистрироваться
+				span
+			+e.option
+				a.link-modal-js(href= '#modal-enter') Вход
+	// #modal-register
+
+	+b.modal-win--enter(id="modal-enter" class=" " style="display: none" )
+		+form-wrap
+			.h3.text-center Вход
+			+input("Логин",'text')
+			+input("Пароль",'password')
+				+e.show-hide-btn.toggle-pass-inp-js
+					+icon('pass-eye')
+			+e.btn.btn(type="submit") Вход
+				span
+			+e.option
+				a.link-modal-js(href= '#modal-register') Регистрация
+	// #modal-enter
+
 	+b.modal-win--call(id="modal-call" class=" " style="display: none" )
 		+form-wrap
-			.h4 Заказать звонок
-			+e.caption Заполните форму, и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время
-			+input("Ваше имя",'text')
-			+input("Ваш телефон",'tel')
-			+e.btn(type="submit") Забронировать место
-			+e.agreement Я&nbsp;согласен(а) на&nbsp;обработку и&nbsp;хранение моих персональных данных в&nbsp;соответствии с&nbsp;условиями.
+			.h3.text-center Заказать звонок
+			+e.EM.instruction Оставьте ваш номер телефона и мы перезвоним вам в течение 30 минут
+			+b.soc--questions
+				mixin item(icon, a='#')
+					+e.A.item(href= a target="_blank")
+						if block
+							block
+						else
+							+icon(icon)
+				+item('telegram-q')
+				+item('phone-call-q')
+				+item('watsapp-q')
+			+input("+7 (___) ___-__-__",'tel')
+			+e.btn.btn(type="submit") Отправить
+				span
 	// #modal-call
-	
+
+
+	+b.modal-win--buy(id="modal-buy" class=" " style="display: none" )
+		+form-wrap
+			.h3.text-center Хочу этот товар
+			+b.soc--questions
+				+item('telegram-q')
+				+item('phone-call-q')
+				+item('watsapp-q')
+			+input("Имя",'text')
+			+input("+7 (___) ___-__-__",'tel')
+			+input("Ссылка на товар",'text')
+			+e.btn.btn(type="submit") Купить
+				span
+	// #modal-buy
+
 	// modal

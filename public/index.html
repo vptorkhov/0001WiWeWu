@@ -68,7 +68,7 @@
 												</ul>
 											</li>
 											<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор Доставки</a></li>
-											<li class="menu-item login" itemprop="item"><a href="#" itemprop="url">Регистрация&nbsp;/ Вход</a></li>
+											<li class="menu-item login" itemprop="item"><a class="link-modal-js" href="#modal-enter" itemprop="url">Регистрация&nbsp;/ Вход</a></li>
 										</ul>
 										<div class="topLine p-3 d-lg-none">
 											<div class="mb-4">
@@ -104,7 +104,7 @@
 							</div>
 							<div class="topLine__soc-item col-auto"><a href="#"><img src="img/svg/telegram.svg"/></a><a href="#"><img src="img/svg/viber.svg"/></a><a href="#"><img src="img/svg/whatsapp.svg"/></a>
 							</div>
-							<div class="col-auto d-none d-md-block"><a class="tel" href="tel:88000000000">8 800 000-00-00</a><a class="call" href="#">Заказать звонок</a></div>
+							<div class="col-auto d-none d-md-block"><a class="tel" href="tel:88000000000">8 800 000-00-00</a><a class="call link-modal-js" href="#modal-call">Заказать звонок</a></div>
 							<div class="col-auto d-lg-none">
 								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 								</div>
@@ -1263,7 +1263,7 @@
 							<!-- /picture-->
 						</div>
 						<div class="row">
-							<div class="col-5 col-sm-6 col-md-2 col-xl-auto">
+							<div class="col-12 col-sm-6 col-md-2 col-xl-auto">
 								<ul class="footer__menu footer__menu--first">
 									<li><a href="#">О&nbsp;нас</a></li>
 									<li><a href="#">Отзывы</a></li>
@@ -1272,7 +1272,7 @@
 									<li><a href="#">Контакты</a></li>
 								</ul>
 							</div>
-							<div class="col-7 col-sm-6 col-md-3 col-xl-auto">
+							<div class="col-12 col-sm-6 col-md-3 col-xl-auto">
 								<ul class="footer__menu footer__menu--second">
 									<li><a href="#">Оплата</a></li>
 									<li><a href="#">Доставка</a></li>
@@ -1281,7 +1281,7 @@
 									<li><a href="#">Ограничения и&nbsp;запреты</a></li>
 								</ul>
 							</div>
-							<div class="col-5 col-sm-6 col-md-3 col-xl-auto">
+							<div class="col-12 col-sm-6 col-md-3 col-xl-auto">
 								<ul class="footer__menu footer__menu--third">
 									<li><a href="#">Как заказать</a></li>
 									<li><a href="#">Как мы&nbsp;работаем</a></li>
@@ -1290,7 +1290,7 @@
 									<li><a href="#">Помощь при покупке</a></li>
 								</ul>
 							</div>
-							<div class="col-7 col-sm-6 col-md">
+							<div class="col-12 col-sm-6 col-md">
 								<div class="footer__contacts">
 									<a class="footer__tel" href="tel:88000000000">8 800 000-00-00
 									</a>
@@ -1391,6 +1391,91 @@
 				</div>
 			</footer>
 		</div>
+		<div class="modal-win modal-win--register" id="modal-register" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<input type="hidden" name="example-input-field"/>
+					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+					<input class="utm_source" type="hidden" name="utm_source"/>
+					<input class="utm_term" type="hidden" name="utm_term"/>
+					<input class="utm_medium" type="hidden" name="utm_medium"/>
+					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+					<div class="h3 text-center">Регистрация</div>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Имя" name="text"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control with-bg" type="text" placeholder="Фамилия" name="text"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control with-bg" type="email" placeholder="Email" name="email" required="required"/><em>Придет письмо с подтверждением</em>
+					</div>
+					<!-- +e.input-wrap--><em class="form-wrap__instruction">Выберите Германию (Deutschland или Germany) своей&nbsp;страной на сайте магазина. <strong>Обязательно</strong></em>
+					<div class="form-wrap__input-wrap form-group">
+						<select class="form-wrap__input form-select" name="select">
+							<option value="Germany">Germany</option>
+							<option value=" placeholder 1">placeholder 1</option>
+							<option value=" placeholder 2">placeholder 2</option>
+							<option value=" placeholder 3">placeholder 3</option>
+							<option value=" placeholder 4">placeholder 4</option>
+						</select>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control with-bg" type="text" placeholder="Персональный адрес" name="text"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="password" placeholder="Пароль" name="password"/>
+						<div class="form-wrap__show-hide-btn toggle-pass-inp-js">
+							<svg class="icon icon-pass-eye ">
+								<use xlink:href="img/svg/sprite.svg#pass-eye"></use>
+							</svg>
+						</div>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="password" placeholder="Повторите пароль" name="password"/>
+						<div class="form-wrap__show-hide-btn toggle-pass-inp-js">
+							<svg class="icon icon-pass-eye ">
+								<use xlink:href="img/svg/sprite.svg#pass-eye"></use>
+							</svg>
+						</div>
+					</div>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn btn" type="submit">Зарегистрироваться<span></span>
+					</button>
+					<div class="form-wrap__option"><a class="link-modal-js" href="#modal-enter">Вход</a>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- #modal-register-->
+		<div class="modal-win modal-win--enter" id="modal-enter" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<input type="hidden" name="example-input-field"/>
+					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+					<input class="utm_source" type="hidden" name="utm_source"/>
+					<input class="utm_term" type="hidden" name="utm_term"/>
+					<input class="utm_medium" type="hidden" name="utm_medium"/>
+					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+					<div class="h3 text-center">Вход</div>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Логин" name="text"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="password" placeholder="Пароль" name="password"/>
+						<div class="form-wrap__show-hide-btn toggle-pass-inp-js">
+							<svg class="icon icon-pass-eye ">
+								<use xlink:href="img/svg/sprite.svg#pass-eye"></use>
+							</svg>
+						</div>
+					</div>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn btn" type="submit">Вход<span></span>
+					</button>
+					<div class="form-wrap__option"><a class="link-modal-js" href="#modal-register">Регистрация</a>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- #modal-enter-->
 		<div class="modal-win modal-win--call" id="modal-call" style="display: none">
 			<div class="form-wrap">
 				<form>
@@ -1400,23 +1485,75 @@
 					<input class="utm_term" type="hidden" name="utm_term"/>
 					<input class="utm_medium" type="hidden" name="utm_medium"/>
 					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
-					<div class="h4">Заказать звонок</div>
-					<div class="form-wrap__caption">Заполните форму, и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время
+					<div class="h3 text-center">Заказать звонок</div><em class="form-wrap__instruction">Оставьте ваш номер телефона и мы перезвоним вам в течение 30 минут</em>
+					<div class="soc soc--questions">
+						<a class="soc__item" href="#" target="_blank">
+							<svg class="icon icon-telegram-q ">
+								<use xlink:href="img/svg/sprite.svg#telegram-q"></use>
+							</svg>
+						</a>
+						<a class="soc__item" href="#" target="_blank">
+							<svg class="icon icon-phone-call-q ">
+								<use xlink:href="img/svg/sprite.svg#phone-call-q"></use>
+							</svg>
+						</a>
+						<a class="soc__item" href="#" target="_blank">
+							<svg class="icon icon-watsapp-q ">
+								<use xlink:href="img/svg/sprite.svg#watsapp-q"></use>
+							</svg>
+						</a>
 					</div>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше имя" name="text"/>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="+7 (___) ___-__-__" name="tel"/>
 					</div>
 					<!-- +e.input-wrap-->
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" name="tel"/>
-					</div>
-					<!-- +e.input-wrap-->
-					<button class="form-wrap__btn" type="submit">Забронировать место
+					<button class="form-wrap__btn btn" type="submit">Отправить<span></span>
 					</button>
-					<div class="form-wrap__agreement">Я&nbsp;согласен(а) на&nbsp;обработку и&nbsp;хранение моих персональных данных в&nbsp;соответствии с&nbsp;условиями.
-					</div>
 				</form>
 			</div>
 		</div>
 		<!-- #modal-call-->
+		<div class="modal-win modal-win--buy" id="modal-buy" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<input type="hidden" name="example-input-field"/>
+					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+					<input class="utm_source" type="hidden" name="utm_source"/>
+					<input class="utm_term" type="hidden" name="utm_term"/>
+					<input class="utm_medium" type="hidden" name="utm_medium"/>
+					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+					<div class="h3 text-center">Хочу этот товар</div>
+					<div class="soc soc--questions">
+						<a class="soc__item" href="#" target="_blank">
+							<svg class="icon icon-telegram-q ">
+								<use xlink:href="img/svg/sprite.svg#telegram-q"></use>
+							</svg>
+						</a>
+						<a class="soc__item" href="#" target="_blank">
+							<svg class="icon icon-phone-call-q ">
+								<use xlink:href="img/svg/sprite.svg#phone-call-q"></use>
+							</svg>
+						</a>
+						<a class="soc__item" href="#" target="_blank">
+							<svg class="icon icon-watsapp-q ">
+								<use xlink:href="img/svg/sprite.svg#watsapp-q"></use>
+							</svg>
+						</a>
+					</div>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Имя" name="text"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="+7 (___) ___-__-__" name="tel"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ссылка на товар" name="text"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn btn" type="submit">Купить<span></span>
+					</button>
+				</form>
+			</div>
+		</div>
+		<!-- #modal-buy-->
 		<!-- modal-->
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>

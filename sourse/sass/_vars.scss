@@ -746,7 +746,8 @@ $input-group-addon-border-color: $input-border-color !default;
 
 // scss-docs-start form-select-variables
 $form-select-padding-y: $input-padding-y !default;
-$form-select-padding-x: $input-padding-x !default;
+$form-select-padding-x: 18px !default;
+// $form-select-padding-x: $input-padding-x !default;
 $form-select-font-family: $input-font-family !default;
 $form-select-font-size: $input-font-size !default;
 $form-select-indicator-padding: $form-select-padding-x * 3 !default; // Extra padding for background-image
@@ -758,9 +759,9 @@ $form-select-disabled-color: null !default;
 $form-select-disabled-bg: $gray-200 !default;
 $form-select-disabled-border-color: $input-disabled-border-color !default;
 $form-select-bg-position: right $form-select-padding-x center !default;
-$form-select-bg-size: 16px 12px !default; // In pixels because image dimensions
-$form-select-indicator-color: $gray-800 !default;
-$form-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-indicator-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/></svg>") !default;
+$form-select-bg-size: 12px 8px !default; // In pixels because image dimensions
+$form-select-indicator-color: $success2 !default;
+$form-select-indicator: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7' viewBox='0 0 11 7'%3E%3Cg%3E%3Cg%3E%3Cpath fill='%237e8b76' d='M5.82 6.393l4.497-4.784a.603.603 0 0 0 .161-.415.602.602 0 0 0-.161-.416L9.986.426a.53.53 0 0 0-.782 0L5.43 4.442 1.649.422a.533.533 0 0 0-.782 0l-.33.351a.604.604 0 0 0-.162.417c0 .156.057.304.161.415l4.5 4.788a.533.533 0 0 0 .785 0z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") !default;
 // $form-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-indicator-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/></svg>") !default;
 
 $form-select-feedback-icon-padding-end: $form-select-padding-x * 2.5+$form-select-indicator-padding !default;
@@ -774,7 +775,8 @@ $form-select-box-shadow: $box-shadow-inset !default;
 
 $form-select-focus-border-color: $input-focus-border-color !default;
 $form-select-focus-width: $input-focus-width !default;
-$form-select-focus-box-shadow: 0 0 0 $form-select-focus-width $input-btn-focus-color !default;
+$form-select-focus-box-shadow: none;
+// $form-select-focus-box-shadow: 0 0 0 $form-select-focus-width $input-btn-focus-color !default;
 
 $form-select-padding-y-sm: $input-padding-y-sm !default;
 $form-select-padding-x-sm: $input-padding-x-sm !default;

@@ -1,10 +1,10 @@
 .top-nav {
-	position: relative;
+	// position: relative;
 	z-index: 1000;
-	&.fixed {
-		position: fixed;
-		width: 100%;
-	}
+	position: fixed;
+	width: 100%;
+	// &.fixed {
+	// }
 	@include media-breakpoint-up(lg) {
 		background-color: $success;
 	}
