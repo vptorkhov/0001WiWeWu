@@ -37,9 +37,14 @@
 	}
 	> li > a {
 		border-radius: $border-radius;
-		&:active,
-		&:hover {
+		&.active,
+		&:active {
 			background-color: #91ba71;
+		}
+		&:hover {
+			@include media-breakpoint-up(lg) {
+				background-color: #91ba71;
+			}
 		}
 		// background-color: $primary;
 	}
@@ -93,7 +98,9 @@
 	}
 	li:hover {
 		> a {
-			background-color: #91ba71;
+			@include media-breakpoint-up(lg) {
+				background-color: #91ba71;
+			}
 			&::after {
 				@include media-breakpoint-up(lg) {
 					transform: rotateX(180deg);
