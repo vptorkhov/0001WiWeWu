@@ -41,16 +41,26 @@ mixin modal()
 		+form-wrap
 			.h3.text-center Заказать звонок
 			+e.EM.instruction Оставьте ваш номер телефона и мы перезвоним вам в течение 30 минут
-			+b.soc--questions
-				mixin item(icon, a='#')
-					+e.A.item(href= a target="_blank")
-						if block
-							block
-						else
-							+icon(icon)
-				+item('telegram-q')
-				+item('phone-call-q')
-				+item('watsapp-q')
+			//- +b.soc--questions
+			//- 	mixin item(icon, a='#')
+			//- 		+e.A.item(href= a target="_blank")
+			//- 			if block
+			//- 				block
+			//- 			else
+			//- 				+icon(icon)
+			//- 	+item('telegram-q')
+			//- 	+item('phone-call-q')
+			//- 	+item('watsapp-q')
+			+b.mass
+				+e.LABEL.item
+					input(type="checkbox" name="soc" value='' checked)
+					+icon('telegram-q')
+				+e.LABEL.item
+					input(type="checkbox" name="soc" value='')
+					+icon('phone-call-q')
+				+e.LABEL.item
+					input(type="checkbox" name="soc" value='')
+					+icon('watsapp-q')
 			+input("+7 (___) ___-__-__",'tel')
 			+e.btn.btn(type="submit") Отправить
 				span
@@ -60,10 +70,21 @@ mixin modal()
 	+b.modal-win--buy(id="modal-buy" class=" " style="display: none" )
 		+form-wrap
 			.h3.text-center Хочу этот товар
-			+b.soc--questions
-				+item('telegram-q')
-				+item('phone-call-q')
-				+item('watsapp-q')
+			//- +b.soc--questions
+			//- 	+item('telegram-q')
+			//- 	+item('phone-call-q')
+			//- 	+item('watsapp-q')
+			+b.mass
+				+e.LABEL.item
+					input(type="checkbox" name="soc" value='' checked)
+					+icon('telegram-q')
+				+e.LABEL.item
+					input(type="checkbox" name="soc" value='')
+					+icon('phone-call-q')
+				+e.LABEL.item
+					input(type="checkbox" name="soc" value='')
+					+icon('watsapp-q')
+				
 			+input("Имя",'text')
 			+input("+7 (___) ___-__-__",'tel')
 			+input("Ссылка на товар",'text')

@@ -51,6 +51,56 @@
 			}
 		}
 	}
+	.mass {
+		justify-content: center;
+		margin-bottom: rem(18);
+		@include roww(7px, m);
+		&__item {
+			width: rem(38);
+			height: rem(38);
+			input {
+				.icon {
+					&-telegram-q {
+						font-size: rem(18);
+					}
+					&-phone-call-q {
+						font-size: rem(19);
+					}
+					&-watsapp-q {
+						font-size: rem(20);
+					}
+				}
+				&:checked {
+					& ~ .icon {
+						&-telegram-q {
+							color: #2ba6e2;
+						}
+						&-phone-call-q {
+							color: #7e4f9f;
+						}
+						&-watsapp-q {
+							color: #36b424;
+						}
+					}
+				}
+				&:hover {
+					@include media-breakpoint-up(lg) {
+						& ~ .icon {
+							&-telegram-q {
+								color: #2ba6e2;
+							}
+							&-phone-call-q {
+								color: #7e4f9f;
+							}
+							&-watsapp-q {
+								color: #36b424;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 
 	.form-wrap {
 		.h3 {

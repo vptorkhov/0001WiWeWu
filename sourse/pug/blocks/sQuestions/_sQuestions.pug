@@ -5,8 +5,20 @@ mixin sQuestions(data)
 			+b.section-title.text-center
 				h2 Остались вопросы?
 				p Оставьте контактные данные и&nbsp;наш менеджер свяжется с&nbsp;Вами в&nbsp;течение 10&nbsp;минут.
-			+soc-questions
 			+form-wrap()
+				+b.mass
+					+e.LABEL.item
+						input(type="checkbox" name="soc" value='' checked)
+						+icon('telegram-q')
+					+e.LABEL.item
+						input(type="checkbox" name="soc" value='')
+						+icon('phone-call-q')
+					+e.LABEL.item
+						input(type="checkbox" name="soc" value='')
+						+icon('watsapp-q')
+					+e.LABEL.item
+						input(type="checkbox" name="soc" value='')
+						+icon('phone-q')
 				.row
 					.col
 						+input('Номер телефона','tel').with-bg
