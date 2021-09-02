@@ -85,9 +85,7 @@
 		bottom: 0;
 		object-fit: contain;
 		z-index: -2;
-		@include media-breakpoint-down(xxl){
-			opacity: 0.5;
-		}
+		max-width: 49%;
 		img{
 			// top: auto;
 			// bottom: 0;

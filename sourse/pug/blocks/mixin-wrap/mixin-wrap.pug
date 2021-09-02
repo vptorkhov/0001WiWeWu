@@ -27,6 +27,10 @@ mixin spec(t)
 	p.spec
 		span!=t
 
+mixin spec-a(t)
+	a.spec(href="#")
+		span!=t
+
 mixin content-item(t)
 	.row
 		- for (var x = 0; x < 8; x++)
