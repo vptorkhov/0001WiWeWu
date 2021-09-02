@@ -77,15 +77,19 @@
 .sCompanyAdv {
 	--sPT:#{rem(90)};
 	--sPB:#{rem(79)};
-	.picture-bg{
-		max-width: 49%;
+	position: relative;
+	.bg-pic{
+		position: absolute;
+		// max-width: 49%;
 		top: auto;
 		bottom: 0;
 		object-fit: contain;
+		z-index: -2;
+		max-width: 49%;
 		img{
-			top: auto;
-			bottom: 0;
-			object-fit: fill;
+			// top: auto;
+			// bottom: 0;
+			// object-fit: cover;
 		}
 	}
 	h2{

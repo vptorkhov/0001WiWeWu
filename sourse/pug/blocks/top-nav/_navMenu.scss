@@ -112,10 +112,11 @@
 		}
 	}
 	.sub-menu {
+		border-radius: 0 0 $border-radius $border-radius !important;
 		@include media-breakpoint-up(lg) {
 			position: absolute;
 			left: 0;
-			top: calc(100% -10px);
+			top: calc(100%);
 
 			border-radius: $border-radius;
 		}

@@ -1,9 +1,12 @@
-mixin sTariffs(t)
+mixin sTariffs(t,h1)
 	// start sTariffs
 	+b.SECTION.sTariffs.section#sTariffs&attributes(attributes)
 		.container
 			+b.section-title
-				h2!=t
+				if h1=='h1'
+					h1!=t
+				else
+					h2!=t
 			.row
 				mixin tariff-item(i,t, ...items)
 					.col-12.col-lg-4.col-info
